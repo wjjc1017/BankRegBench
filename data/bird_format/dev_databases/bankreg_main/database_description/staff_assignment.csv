@@ -1,0 +1,8 @@
+original_column_name,column_name,column_description,data_format,value_description
+assignment_id,assignment_id,"员工岗位分配表（assignment_id, staff_id 员工工号, org_unit_id 机构单元编号, role_code 岗位角色, role_title 岗位名称）中的字段 assignment_id",TEXT,"示例值: ASG-STAFF-00001, ASG-STAFF-00004, ASG-STAFF-00007, ASG-STAFF-00010, ASG-STAFF-00013, ASG-STAFF-00016"
+staff_id,staff_id,"员工岗位分配表（assignment_id, staff_id 员工工号, org_unit_id 机构单元编号, role_code 岗位角色, role_title 岗位名称）中的字段 staff_id",TEXT,"示例值: STAFF-00001, STAFF-00004, STAFF-00007, STAFF-00010, STAFF-00013, STAFF-00016"
+org_unit_id,org_unit_id,"员工岗位分配表（assignment_id, staff_id 员工工号, org_unit_id 机构单元编号, role_code 岗位角色, role_title 岗位名称）中的字段 org_unit_id",TEXT,"示例值: INST-001-B03, INST-001-HQ, INST-002-B03, INST-002-HQ, INST-003-B02, INST-003-B05"
+role_code,role_code,"员工岗位分配表（assignment_id, staff_id 员工工号, org_unit_id 机构单元编号, role_code 岗位角色, role_title 岗位名称）中的字段 role_code",TEXT,"示例值: RELATIONSHIP_MANAGER, TELLER, CREDIT_OFFICER"
+role_title,role_title,"员工岗位分配表（assignment_id, staff_id 员工工号, org_unit_id 机构单元编号, role_code 岗位角色, role_title 岗位名称）中的字段 role_title",TEXT,"示例值: 柜员, 信贷审批, 客户经理"
+effective_from,effective_from,"员工岗位分配表（assignment_id, staff_id 员工工号, org_unit_id 机构单元编号, role_code 岗位角色, role_title 岗位名称）中的字段 effective_from",TEXT,示例值: 2016-01-01
+effective_to,effective_to,"员工岗位分配表（assignment_id, staff_id 员工工号, org_unit_id 机构单元编号, role_code 岗位角色, role_title 岗位名称）中的字段 effective_to",TEXT,

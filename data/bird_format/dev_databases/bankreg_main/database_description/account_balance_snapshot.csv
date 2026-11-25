@@ -1,0 +1,8 @@
+original_column_name,column_name,column_description,data_format,value_description
+account_balance_id,account_balance_id,"账户余额快照表（account_balance_id, account_id 账户编号, as_of_date 快照日期, ledger_balance 账面余额, available_balance 可用余额）中的字段 account_balance_id",TEXT,"示例值: BALS-ACC-000001, BALS-ACC-000002, BALS-ACC-000003, BALS-ACC-000004, BALS-ACC-000005, BALS-ACC-000006"
+account_id,account_id,"账户余额快照表（account_balance_id, account_id 账户编号, as_of_date 快照日期, ledger_balance 账面余额, available_balance 可用余额）中的字段 account_id",TEXT,"示例值: ACC-000001, ACC-000002, ACC-000003, ACC-000004, ACC-000005, ACC-000006"
+as_of_date,as_of_date,"账户余额快照表（account_balance_id, account_id 账户编号, as_of_date 快照日期, ledger_balance 账面余额, available_balance 可用余额）中的字段 as_of_date",TEXT,示例值: 2026-06-30
+ledger_balance,ledger_balance,"账户余额快照表（account_balance_id, account_id 账户编号, as_of_date 快照日期, ledger_balance 账面余额, available_balance 可用余额）中的字段 ledger_balance",REAL,"示例值: 542431423.04, 5140307.45, 7087944.54, 191586031.65, 392717524.64, 6122802.39"
+available_balance,available_balance,"账户余额快照表（account_balance_id, account_id 账户编号, as_of_date 快照日期, ledger_balance 账面余额, available_balance 可用余额）中的字段 available_balance",REAL,"示例值: 498705922.91, 4160421.34, 4866702.03, 173861686.05, 338131438.78, 4590863.03"
+debit_balance,debit_balance,"账户余额快照表（account_balance_id, account_id 账户编号, as_of_date 快照日期, ledger_balance 账面余额, available_balance 可用余额）中的字段 debit_balance",REAL,"示例值: 542431423.04, 5140307.45, 7087944.54, 191586031.65, 392717524.64, 6122802.39"
+credit_balance,credit_balance,"账户余额快照表（account_balance_id, account_id 账户编号, as_of_date 快照日期, ledger_balance 账面余额, available_balance 可用余额）中的字段 credit_balance",REAL,"示例值: 19527.24, 41847.17, 37403.94, 63187.81, 45244.84, 4334.96"

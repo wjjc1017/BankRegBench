@@ -1,0 +1,3 @@
+original_column_name,column_name,column_description,data_format,value_description
+relation_type,relation_type,"关联关系类型受控词表（relation_type 关系代码, relation_name_zh 中文名称 如非关联方/实际控制人/同受控制企业等）中的字段 relation_type",TEXT,"示例值: AFFILIATE, COMMON_CONTROL, DE_FACTO_CONTROLLER, NON_RELATED, SENIOR_MANAGER, SHADOW_SHAREHOLDER"
+relation_name_zh,relation_name_zh,"关联关系类型受控词表（relation_type 关系代码, relation_name_zh 中文名称 如非关联方/实际控制人/同受控制企业等）中的字段 relation_name_zh",TEXT,"示例值: 影子股东, 实际控制人, 重大关联方, 同受控制企业, 关键管理人员, 非关联方"

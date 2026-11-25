@@ -1,0 +1,8 @@
+original_column_name,column_name,column_description,data_format,value_description
+loan_cashflow_id,loan_cashflow_id,loan_cashflow中的字段 loan_cashflow_id,TEXT,
+loan_id,loan_id,loan_cashflow中的字段 loan_id,TEXT,
+payment_id,payment_id,loan_cashflow中的字段 payment_id,TEXT,
+cashflow_type,cashflow_type,loan_cashflow中的字段 cashflow_type,TEXT,
+business_date,business_date,loan_cashflow中的字段 business_date,TEXT,
+amount,amount,loan_cashflow中的字段 amount,REAL,
+principal_balance_after,principal_balance_after,loan_cashflow中的字段 principal_balance_after,REAL,

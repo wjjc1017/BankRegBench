@@ -1,0 +1,842 @@
+[
+  {
+    "framework": "direct_ddl",
+    "model": "deepseek-v4.1-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 78.5,
+    "ex_ordered_heldout_dev_test": 77.0,
+    "ex_unordered": 78.5,
+    "ex_ordered": 77.0,
+    "executable_rate": 97.0,
+    "avg_latency_sec": 7.61,
+    "by_split": {
+      "dev": 81.63,
+      "test": 75.49
+    },
+    "by_difficulty": {
+      "easy": 91.67,
+      "extra": 53.85,
+      "hard": 77.78,
+      "medium": 84.06
+    },
+    "by_num_tables": {
+      "1": 83.33,
+      "2": 81.97,
+      "3": 80.43,
+      "4": 79.41,
+      "5": 65.0,
+      "6": 64.29,
+      "7": 100.0
+    }
+  },
+  {
+    "framework": "m_schema",
+    "model": "deepseek-v4.1-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 83.0,
+    "ex_ordered_heldout_dev_test": 81.0,
+    "ex_unordered": 83.0,
+    "ex_ordered": 81.0,
+    "executable_rate": 97.0,
+    "avg_latency_sec": 7.35,
+    "by_split": {
+      "dev": 78.57,
+      "test": 87.25
+    },
+    "by_difficulty": {
+      "easy": 91.67,
+      "extra": 76.92,
+      "hard": 81.48,
+      "medium": 84.06
+    },
+    "by_num_tables": {
+      "1": 83.33,
+      "2": 90.16,
+      "3": 82.61,
+      "4": 88.24,
+      "5": 70.0,
+      "6": 64.29,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "schemagate",
+    "model": "deepseek-v4.1-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 76.5,
+    "ex_ordered_heldout_dev_test": 74.5,
+    "ex_unordered": 76.5,
+    "ex_ordered": 74.5,
+    "executable_rate": 98.0,
+    "avg_latency_sec": 13.64,
+    "by_split": {
+      "dev": 75.51,
+      "test": 77.45
+    },
+    "by_difficulty": {
+      "easy": 87.5,
+      "extra": 53.85,
+      "hard": 77.78,
+      "medium": 79.71
+    },
+    "by_num_tables": {
+      "1": 83.33,
+      "2": 81.97,
+      "3": 80.43,
+      "4": 76.47,
+      "5": 50.0,
+      "6": 71.43,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "dail_sql",
+    "model": "deepseek-v4.1-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 80.0,
+    "ex_ordered_heldout_dev_test": 79.0,
+    "ex_unordered": 80.0,
+    "ex_ordered": 79.0,
+    "executable_rate": 95.5,
+    "avg_latency_sec": 8.13,
+    "by_split": {
+      "dev": 81.63,
+      "test": 78.43
+    },
+    "by_difficulty": {
+      "easy": 91.67,
+      "extra": 65.38,
+      "hard": 79.01,
+      "medium": 82.61
+    },
+    "by_num_tables": {
+      "1": 83.33,
+      "2": 81.97,
+      "3": 86.96,
+      "4": 82.35,
+      "5": 75.0,
+      "6": 50.0,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "rsl_sql",
+    "model": "deepseek-v4.1-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 79.0,
+    "ex_ordered_heldout_dev_test": 76.5,
+    "ex_unordered": 79.0,
+    "ex_ordered": 76.5,
+    "executable_rate": 98.5,
+    "avg_latency_sec": 9.29,
+    "by_split": {
+      "dev": 81.63,
+      "test": 76.47
+    },
+    "by_difficulty": {
+      "easy": 87.5,
+      "extra": 61.54,
+      "hard": 79.01,
+      "medium": 82.61
+    },
+    "by_num_tables": {
+      "1": 87.5,
+      "2": 80.33,
+      "3": 80.43,
+      "4": 82.35,
+      "5": 70.0,
+      "6": 64.29,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "chess",
+    "model": "deepseek-v4.1-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 78.5,
+    "ex_ordered_heldout_dev_test": 76.5,
+    "ex_unordered": 78.5,
+    "ex_ordered": 76.5,
+    "executable_rate": 98.5,
+    "avg_latency_sec": 16.75,
+    "by_split": {
+      "dev": 79.59,
+      "test": 77.45
+    },
+    "by_difficulty": {
+      "easy": 83.33,
+      "extra": 65.38,
+      "hard": 81.48,
+      "medium": 78.26
+    },
+    "by_num_tables": {
+      "1": 87.5,
+      "2": 86.89,
+      "3": 78.26,
+      "4": 64.71,
+      "5": 70.0,
+      "6": 78.57,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "deepeye_axissql",
+    "model": "deepseek-v4.1-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 89.5,
+    "ex_ordered_heldout_dev_test": 87.5,
+    "ex_unordered": 89.5,
+    "ex_ordered": 87.5,
+    "executable_rate": 100.0,
+    "avg_latency_sec": 6.83,
+    "by_split": {
+      "dev": 88.78,
+      "test": 90.2
+    },
+    "by_difficulty": {
+      "easy": 100.0,
+      "extra": 76.92,
+      "hard": 87.65,
+      "medium": 92.75
+    },
+    "by_num_tables": {
+      "1": 87.5,
+      "2": 93.44,
+      "3": 89.13,
+      "4": 91.18,
+      "5": 90.0,
+      "6": 71.43,
+      "7": 100.0
+    }
+  },
+  {
+    "framework": "direct_ddl",
+    "model": "deepseek-v4-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 61.5,
+    "ex_ordered_heldout_dev_test": 59.5,
+    "ex_unordered": 61.5,
+    "ex_ordered": 59.5,
+    "executable_rate": 97.5,
+    "avg_latency_sec": 16.43,
+    "by_split": {
+      "dev": 63.27,
+      "test": 59.8
+    },
+    "by_difficulty": {
+      "easy": 70.83,
+      "extra": 46.15,
+      "hard": 60.49,
+      "medium": 65.22
+    },
+    "by_num_tables": {
+      "1": 62.5,
+      "2": 75.41,
+      "3": 63.04,
+      "4": 58.82,
+      "5": 30.0,
+      "6": 50.0,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "m_schema",
+    "model": "deepseek-v4-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 61.0,
+    "ex_ordered_heldout_dev_test": 60.0,
+    "ex_unordered": 61.0,
+    "ex_ordered": 60.0,
+    "executable_rate": 97.0,
+    "avg_latency_sec": 5.84,
+    "by_split": {
+      "dev": 62.24,
+      "test": 59.8
+    },
+    "by_difficulty": {
+      "easy": 83.33,
+      "extra": 46.15,
+      "hard": 58.02,
+      "medium": 62.32
+    },
+    "by_num_tables": {
+      "1": 66.67,
+      "2": 72.13,
+      "3": 65.22,
+      "4": 61.76,
+      "5": 30.0,
+      "6": 35.71,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "schemagate",
+    "model": "deepseek-v4-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 59.0,
+    "ex_ordered_heldout_dev_test": 57.0,
+    "ex_unordered": 59.0,
+    "ex_ordered": 57.0,
+    "executable_rate": 97.5,
+    "avg_latency_sec": 7.6,
+    "by_split": {
+      "dev": 64.29,
+      "test": 53.92
+    },
+    "by_difficulty": {
+      "easy": 66.67,
+      "extra": 34.62,
+      "hard": 61.73,
+      "medium": 62.32
+    },
+    "by_num_tables": {
+      "1": 58.33,
+      "2": 70.49,
+      "3": 67.39,
+      "4": 55.88,
+      "5": 25.0,
+      "6": 42.86,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "dail_sql",
+    "model": "deepseek-v4-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 62.5,
+    "ex_ordered_heldout_dev_test": 61.5,
+    "ex_unordered": 62.5,
+    "ex_ordered": 61.5,
+    "executable_rate": 97.0,
+    "avg_latency_sec": 7.54,
+    "by_split": {
+      "dev": 64.29,
+      "test": 60.78
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 34.62,
+      "hard": 62.96,
+      "medium": 68.12
+    },
+    "by_num_tables": {
+      "1": 54.17,
+      "2": 77.05,
+      "3": 67.39,
+      "4": 61.76,
+      "5": 35.0,
+      "6": 42.86,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "rsl_sql",
+    "model": "deepseek-v4-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 68.5,
+    "ex_ordered_heldout_dev_test": 66.5,
+    "ex_unordered": 68.5,
+    "ex_ordered": 66.5,
+    "executable_rate": 100.0,
+    "avg_latency_sec": 8.62,
+    "by_split": {
+      "dev": 70.41,
+      "test": 66.67
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 57.69,
+      "hard": 66.67,
+      "medium": 72.46
+    },
+    "by_num_tables": {
+      "1": 70.83,
+      "2": 80.33,
+      "3": 71.74,
+      "4": 64.71,
+      "5": 40.0,
+      "6": 57.14,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "chess",
+    "model": "deepseek-v4-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 64.5,
+    "ex_ordered_heldout_dev_test": 62.5,
+    "ex_unordered": 64.5,
+    "ex_ordered": 62.5,
+    "executable_rate": 99.5,
+    "avg_latency_sec": 15.02,
+    "by_split": {
+      "dev": 62.24,
+      "test": 66.67
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 61.54,
+      "hard": 60.49,
+      "medium": 66.67
+    },
+    "by_num_tables": {
+      "1": 62.5,
+      "2": 77.05,
+      "3": 67.39,
+      "4": 61.76,
+      "5": 55.0,
+      "6": 28.57,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "deepeye_axissql",
+    "model": "deepseek-v4-flash",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 73.0,
+    "ex_ordered_heldout_dev_test": 71.0,
+    "ex_unordered": 73.0,
+    "ex_ordered": 71.0,
+    "executable_rate": 100.0,
+    "avg_latency_sec": 6.98,
+    "by_split": {
+      "dev": 75.51,
+      "test": 70.59
+    },
+    "by_difficulty": {
+      "easy": 83.33,
+      "extra": 65.38,
+      "hard": 69.14,
+      "medium": 76.81
+    },
+    "by_num_tables": {
+      "1": 66.67,
+      "2": 85.25,
+      "3": 69.57,
+      "4": 73.53,
+      "5": 60.0,
+      "6": 64.29,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "direct_ddl",
+    "model": "qwen3.5-397b-a17b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 55.0,
+    "ex_ordered_heldout_dev_test": 53.0,
+    "ex_unordered": 55.0,
+    "ex_ordered": 53.0,
+    "executable_rate": 81.5,
+    "avg_latency_sec": 21.9,
+    "by_split": {
+      "dev": 50.0,
+      "test": 59.8
+    },
+    "by_difficulty": {
+      "easy": 79.17,
+      "extra": 53.85,
+      "hard": 49.38,
+      "medium": 53.62
+    },
+    "by_num_tables": {
+      "1": 70.83,
+      "2": 70.49,
+      "3": 56.52,
+      "4": 44.12,
+      "5": 30.0,
+      "6": 21.43,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "m_schema",
+    "model": "qwen3.5-397b-a17b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 49.5,
+    "ex_ordered_heldout_dev_test": 48.0,
+    "ex_unordered": 49.5,
+    "ex_ordered": 48.0,
+    "executable_rate": 79.0,
+    "avg_latency_sec": 28.61,
+    "by_split": {
+      "dev": 47.96,
+      "test": 50.98
+    },
+    "by_difficulty": {
+      "easy": 70.83,
+      "extra": 34.62,
+      "hard": 45.68,
+      "medium": 52.17
+    },
+    "by_num_tables": {
+      "1": 66.67,
+      "2": 68.85,
+      "3": 43.48,
+      "4": 38.24,
+      "5": 25.0,
+      "6": 21.43,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "schemagate",
+    "model": "qwen3.5-397b-a17b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 47.0,
+    "ex_ordered_heldout_dev_test": 45.5,
+    "ex_unordered": 47.0,
+    "ex_ordered": 45.5,
+    "executable_rate": 80.5,
+    "avg_latency_sec": 21.39,
+    "by_split": {
+      "dev": 45.92,
+      "test": 48.04
+    },
+    "by_difficulty": {
+      "easy": 58.33,
+      "extra": 50.0,
+      "hard": 40.74,
+      "medium": 49.28
+    },
+    "by_num_tables": {
+      "1": 62.5,
+      "2": 57.38,
+      "3": 36.96,
+      "4": 50.0,
+      "5": 35.0,
+      "6": 21.43,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "dail_sql",
+    "model": "qwen3.5-397b-a17b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 56.0,
+    "ex_ordered_heldout_dev_test": 54.5,
+    "ex_unordered": 56.0,
+    "ex_ordered": 54.5,
+    "executable_rate": 84.0,
+    "avg_latency_sec": 20.54,
+    "by_split": {
+      "dev": 51.02,
+      "test": 60.78
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 46.15,
+      "hard": 49.38,
+      "medium": 60.87
+    },
+    "by_num_tables": {
+      "1": 66.67,
+      "2": 63.93,
+      "3": 63.04,
+      "4": 55.88,
+      "5": 25.0,
+      "6": 28.57,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "rsl_sql",
+    "model": "qwen3.5-397b-a17b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 63.0,
+    "ex_ordered_heldout_dev_test": 60.0,
+    "ex_unordered": 63.0,
+    "ex_ordered": 60.0,
+    "executable_rate": 93.0,
+    "avg_latency_sec": 23.66,
+    "by_split": {
+      "dev": 60.2,
+      "test": 65.69
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 57.69,
+      "hard": 60.49,
+      "medium": 63.77
+    },
+    "by_num_tables": {
+      "1": 66.67,
+      "2": 75.41,
+      "3": 65.22,
+      "4": 52.94,
+      "5": 45.0,
+      "6": 50.0,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "chess",
+    "model": "qwen3.5-397b-a17b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 57.5,
+    "ex_ordered_heldout_dev_test": 56.0,
+    "ex_unordered": 57.5,
+    "ex_ordered": 56.0,
+    "executable_rate": 91.0,
+    "avg_latency_sec": 22.99,
+    "by_split": {
+      "dev": 54.08,
+      "test": 60.78
+    },
+    "by_difficulty": {
+      "easy": 70.83,
+      "extra": 50.0,
+      "hard": 51.85,
+      "medium": 62.32
+    },
+    "by_num_tables": {
+      "1": 62.5,
+      "2": 68.85,
+      "3": 50.0,
+      "4": 52.94,
+      "5": 55.0,
+      "6": 42.86,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "deepeye_axissql",
+    "model": "qwen3.5-397b-a17b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 73.0,
+    "ex_ordered_heldout_dev_test": 71.0,
+    "ex_unordered": 73.0,
+    "ex_ordered": 71.0,
+    "executable_rate": 100.0,
+    "avg_latency_sec": 16.17,
+    "by_split": {
+      "dev": 75.51,
+      "test": 70.59
+    },
+    "by_difficulty": {
+      "easy": 87.5,
+      "extra": 69.23,
+      "hard": 70.37,
+      "medium": 72.46
+    },
+    "by_num_tables": {
+      "1": 83.33,
+      "2": 81.97,
+      "3": 65.22,
+      "4": 67.65,
+      "5": 65.0,
+      "6": 64.29,
+      "7": 100.0
+    }
+  },
+  {
+    "framework": "direct_ddl",
+    "model": "qwen3.6-35b-a3b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 56.0,
+    "ex_ordered_heldout_dev_test": 54.0,
+    "ex_unordered": 56.0,
+    "ex_ordered": 54.0,
+    "executable_rate": 93.0,
+    "avg_latency_sec": 20.0,
+    "by_split": {
+      "dev": 57.14,
+      "test": 54.9
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 42.31,
+      "hard": 54.32,
+      "medium": 56.52
+    },
+    "by_num_tables": {
+      "1": 70.83,
+      "2": 70.49,
+      "3": 47.83,
+      "4": 55.88,
+      "5": 35.0,
+      "6": 28.57,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "m_schema",
+    "model": "qwen3.6-35b-a3b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 54.0,
+    "ex_ordered_heldout_dev_test": 53.0,
+    "ex_unordered": 54.0,
+    "ex_ordered": 53.0,
+    "executable_rate": 92.0,
+    "avg_latency_sec": 21.38,
+    "by_split": {
+      "dev": 59.18,
+      "test": 49.02
+    },
+    "by_difficulty": {
+      "easy": 66.67,
+      "extra": 46.15,
+      "hard": 55.56,
+      "medium": 50.72
+    },
+    "by_num_tables": {
+      "1": 70.83,
+      "2": 68.85,
+      "3": 45.65,
+      "4": 58.82,
+      "5": 25.0,
+      "6": 21.43,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "schemagate",
+    "model": "qwen3.6-35b-a3b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 54.0,
+    "ex_ordered_heldout_dev_test": 52.0,
+    "ex_unordered": 54.0,
+    "ex_ordered": 52.0,
+    "executable_rate": 91.0,
+    "avg_latency_sec": 27.42,
+    "by_split": {
+      "dev": 58.16,
+      "test": 50.0
+    },
+    "by_difficulty": {
+      "easy": 62.5,
+      "extra": 42.31,
+      "hard": 55.56,
+      "medium": 53.62
+    },
+    "by_num_tables": {
+      "1": 75.0,
+      "2": 59.02,
+      "3": 52.17,
+      "4": 58.82,
+      "5": 25.0,
+      "6": 35.71,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "dail_sql",
+    "model": "qwen3.6-35b-a3b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 61.5,
+    "ex_ordered_heldout_dev_test": 61.5,
+    "ex_unordered": 61.5,
+    "ex_ordered": 61.5,
+    "executable_rate": 94.5,
+    "avg_latency_sec": 9.85,
+    "by_split": {
+      "dev": 60.2,
+      "test": 62.75
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 42.31,
+      "hard": 64.2,
+      "medium": 60.87
+    },
+    "by_num_tables": {
+      "1": 66.67,
+      "2": 73.77,
+      "3": 52.17,
+      "4": 61.76,
+      "5": 50.0,
+      "6": 50.0,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "rsl_sql",
+    "model": "qwen3.6-35b-a3b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 62.0,
+    "ex_ordered_heldout_dev_test": 60.0,
+    "ex_unordered": 62.0,
+    "ex_ordered": 60.0,
+    "executable_rate": 98.5,
+    "avg_latency_sec": 16.63,
+    "by_split": {
+      "dev": 63.27,
+      "test": 60.78
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 53.85,
+      "hard": 60.49,
+      "medium": 62.32
+    },
+    "by_num_tables": {
+      "1": 70.83,
+      "2": 73.77,
+      "3": 56.52,
+      "4": 67.65,
+      "5": 45.0,
+      "6": 28.57,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "chess",
+    "model": "qwen3.6-35b-a3b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 57.0,
+    "ex_ordered_heldout_dev_test": 55.0,
+    "ex_unordered": 57.0,
+    "ex_ordered": 55.0,
+    "executable_rate": 96.5,
+    "avg_latency_sec": 12.32,
+    "by_split": {
+      "dev": 57.14,
+      "test": 56.86
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 53.85,
+      "hard": 58.02,
+      "medium": 50.72
+    },
+    "by_num_tables": {
+      "1": 58.33,
+      "2": 70.49,
+      "3": 58.7,
+      "4": 52.94,
+      "5": 50.0,
+      "6": 14.29,
+      "7": 0.0
+    }
+  },
+  {
+    "framework": "deepeye_axissql",
+    "model": "qwen3.6-35b-a3b",
+    "num_questions": 200,
+    "ex_heldout_dev_test": 69.0,
+    "ex_ordered_heldout_dev_test": 67.0,
+    "ex_unordered": 69.0,
+    "ex_ordered": 67.0,
+    "executable_rate": 100.0,
+    "avg_latency_sec": 6.47,
+    "by_split": {
+      "dev": 70.41,
+      "test": 67.65
+    },
+    "by_difficulty": {
+      "easy": 75.0,
+      "extra": 57.69,
+      "hard": 67.9,
+      "medium": 72.46
+    },
+    "by_num_tables": {
+      "1": 75.0,
+      "2": 78.69,
+      "3": 60.87,
+      "4": 73.53,
+      "5": 70.0,
+      "6": 35.71,
+      "7": 0.0
+    }
+  }
+]

@@ -1,0 +1,12 @@
+original_column_name,column_name,column_description,data_format,value_description
+facility_id,facility_id,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 facility_id",TEXT,"示例值: FAC-00001, FAC-00002, FAC-00003, FAC-00004, FAC-00005, FAC-00006"
+institution_id,institution_id,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 institution_id",TEXT,"示例值: INST-001, INST-002, INST-003, INST-004, INST-005, INST-006"
+obligor_party_id,obligor_party_id,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 obligor_party_id",TEXT,"示例值: PTY-C00003, PTY-C00004, PTY-C00010, PTY-C00011, PTY-C00013, PTY-C00014"
+facility_type,facility_type,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 facility_type",TEXT,"示例值: GUARANTEE, TERM, ACCEPTANCE, REVOLVING"
+limit_amount,limit_amount,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 limit_amount",REAL,"示例值: 668193063.36, 433666824.31, 670267090.51, 490142780.15, 3587951.28, 478888411.84"
+currency_code,currency_code,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 currency_code",TEXT,示例值: CNY
+approved_on,approved_on,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 approved_on",TEXT,"示例值: 2024-11-05, 2025-05-21, 2025-03-05, 2023-02-13, 2025-10-01, 2023-07-28"
+effective_from,effective_from,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 effective_from",TEXT,"示例值: 2023-01-02, 2023-01-07, 2023-01-16, 2023-01-20, 2023-01-23, 2023-01-25"
+effective_to,effective_to,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 effective_to",TEXT,示例值: 2027-12-31
+status,status,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 status",TEXT,示例值: ACTIVE
+exception_flag,exception_flag,"授信额度表（facility_id 额度编号, institution_id 机构编号, obligor_party_id 授信客户编号, limit_amount 授信额度金额）中的字段 exception_flag",INTEGER,示例值: 0

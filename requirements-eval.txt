@@ -1,0 +1,9 @@
+# Optional dependencies for online generation adapters:
+# - `direct_ddl`, `m_schema`, `dail_sql`, `chess`, and `deepeye_axissql` all run
+#   out of the box with Python >= 3.10 standard library (via `third_party/m_schema/sqlite_schema_engine.py`).
+# - Install `schemagate` below only if running `schemagate` or `rsl_sql`.
+schemagate>=1.15.0
+
+# Optional: upstream SQLAlchemy/LlamaIndex M-Schema backend (not required for SQLite)
+# sqlalchemy>=2.0.0
+# llama-index-core>=0.11.0

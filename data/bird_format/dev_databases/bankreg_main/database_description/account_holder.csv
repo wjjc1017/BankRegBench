@@ -1,0 +1,7 @@
+original_column_name,column_name,column_description,data_format,value_description
+account_holder_id,account_holder_id,"账户持有人关联表（account_holder_id, account_id 账户编号, party_id 持有人客户编号, holder_role 持有人角色 PRIMARY主持有人/SECONDARY副持有人）中的字段 account_holder_id",TEXT,"示例值: HOLD-0000001, HOLD-0000002, HOLD-0000003, HOLD-0000004, HOLD-0000005, HOLD-0000006"
+account_id,account_id,"账户持有人关联表（account_holder_id, account_id 账户编号, party_id 持有人客户编号, holder_role 持有人角色 PRIMARY主持有人/SECONDARY副持有人）中的字段 account_id",TEXT,"示例值: ACC-000001, ACC-000002, ACC-000003, ACC-000004, ACC-000005, ACC-000006"
+party_id,party_id,"账户持有人关联表（account_holder_id, account_id 账户编号, party_id 持有人客户编号, holder_role 持有人角色 PRIMARY主持有人/SECONDARY副持有人）中的字段 party_id",TEXT,"示例值: PTY-C00001, PTY-C00002, PTY-C00003, PTY-C00004, PTY-C00005, PTY-C00006"
+holder_role,holder_role,"账户持有人关联表（account_holder_id, account_id 账户编号, party_id 持有人客户编号, holder_role 持有人角色 PRIMARY主持有人/SECONDARY副持有人）中的字段 holder_role",TEXT,"示例值: PRIMARY, SECONDARY"
+effective_from,effective_from,"账户持有人关联表（account_holder_id, account_id 账户编号, party_id 持有人客户编号, holder_role 持有人角色 PRIMARY主持有人/SECONDARY副持有人）中的字段 effective_from",TEXT,示例值: 2016-01-01
+effective_to,effective_to,"账户持有人关联表（account_holder_id, account_id 账户编号, party_id 持有人客户编号, holder_role 持有人角色 PRIMARY主持有人/SECONDARY副持有人）中的字段 effective_to",TEXT,

@@ -1,0 +1,11 @@
+original_column_name,column_name,column_description,data_format,value_description
+org_unit_id,org_unit_id,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 org_unit_id",TEXT,"示例值: INST-001-B01, INST-001-B02, INST-001-B03, INST-001-B04, INST-001-B05, INST-001-HQ"
+institution_id,institution_id,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 institution_id",TEXT,"示例值: INST-001, INST-002, INST-003, INST-004, INST-005, INST-006"
+parent_org_unit_id,parent_org_unit_id,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 parent_org_unit_id",TEXT,"示例值: INST-001-HQ, INST-002-HQ, INST-003-HQ, INST-004-HQ, INST-005-HQ, INST-006-HQ"
+unit_name,unit_name,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 unit_name",TEXT,"示例值: 总行营业部, 北京分行, 上海分行, 深圳分行, 杭州分行, 成都分行"
+unit_type,unit_type,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 unit_type",TEXT,"示例值: HEAD_OFFICE, BRANCH"
+region_code,region_code,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 region_code",TEXT,"示例值: 110000, 310000, 440300, 330100, 510100"
+effective_from,effective_from,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 effective_from",TEXT,"示例值: 2015-01-01, 2016-01-01"
+effective_to,effective_to,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 effective_to",TEXT,
+status,status,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 status",TEXT,示例值: ACTIVE
+exception_flag,exception_flag,"营业机构单元/分支行层级表（org_unit_id 机构单元编号, institution_id 所属机构, unit_name 机构单元名称, unit_type 类型, region_code 地区代码）中的字段 exception_flag",INTEGER,示例值: 0

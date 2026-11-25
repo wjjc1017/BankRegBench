@@ -1,0 +1,26 @@
+{
+  "deepseek-v4.1-flash": {
+    "base_url": "https://api.example.com/v1",
+    "api_key_env": "OPENAI_API_KEY",
+    "model": "DeepSeek-V4.1-Flash",
+    "extra_body": {}
+  },
+  "deepseek-v4-flash": {
+    "base_url": "https://api.example.com/v1",
+    "api_key_env": "OPENAI_API_KEY",
+    "model": "DeepSeek-V4-Flash",
+    "extra_body": {}
+  },
+  "qwen3.5-397b-a17b": {
+    "base_url": "https://api.example.com/v1",
+    "api_key_env": "OPENAI_API_KEY",
+    "model": "Qwen3.5-397B-A17B",
+    "extra_body": {}
+  },
+  "qwen3.6-35b-a3b": {
+    "base_url": "https://api.example.com/v1",
+    "api_key_env": "OPENAI_API_KEY",
+    "model": "Qwen3.6-35B-A3B",
+    "extra_body": {}
+  }
+}

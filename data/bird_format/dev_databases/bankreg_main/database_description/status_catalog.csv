@@ -1,0 +1,4 @@
+original_column_name,column_name,column_description,data_format,value_description
+entity,entity,"实体状态值域受控词表（entity 实体表名, status_code 状态代码, name_zh 状态中文名称）中的字段 entity",TEXT,"示例值: account, credit_agreement, loan_drawdown, party, payment, regulatory_event"
+status_code,status_code,"实体状态值域受控词表（entity 实体表名, status_code 状态代码, name_zh 状态中文名称）中的字段 status_code",TEXT,"示例值: ACTIVE, CLOSED, DORMANT, MATURED, SETTLED, WRITTEN_OFF"
+name_zh,name_zh,"实体状态值域受控词表（entity 实体表名, status_code 状态代码, name_zh 状态中文名称）中的字段 name_zh",TEXT,"示例值: 正常, 冻结, 销户, 久悬, 已结清, 已核销"

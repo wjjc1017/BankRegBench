@@ -1,0 +1,8 @@
+original_column_name,column_name,column_description,data_format,value_description
+fx_rate_id,fx_rate_id,fx_rate中的字段 fx_rate_id,TEXT,
+rate_date,rate_date,fx_rate中的字段 rate_date,TEXT,
+base_currency,base_currency,fx_rate中的字段 base_currency,TEXT,
+quote_currency,quote_currency,fx_rate中的字段 quote_currency,TEXT,
+rate_value,rate_value,fx_rate中的字段 rate_value,REAL,
+rate_type,rate_type,fx_rate中的字段 rate_type,TEXT,
+source_kind,source_kind,fx_rate中的字段 source_kind,TEXT,

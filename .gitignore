@@ -1,0 +1,25 @@
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local secrets & private API configs (NEVER commit)
+.env
+.env.*
+!.env.example
+configs/models.json
+
+# Local experiment run outputs & regenerable large artifacts
+outputs/
+results/error_taxonomy_l0_full.json
+data/bird_format/dev_databases/bankreg_main/bankreg_main.sqlite

@@ -1,0 +1,9 @@
+original_column_name,column_name,column_description,data_format,value_description
+ownership_id,ownership_id,ownership_interest中的字段 ownership_id,TEXT,
+owner_party_id,owner_party_id,ownership_interest中的字段 owner_party_id,TEXT,
+target_party_id,target_party_id,ownership_interest中的字段 target_party_id,TEXT,
+ownership_ratio,ownership_ratio,ownership_interest中的字段 ownership_ratio,REAL,
+voting_ratio,voting_ratio,ownership_interest中的字段 voting_ratio,REAL,
+is_controller,is_controller,ownership_interest中的字段 is_controller,INTEGER,
+effective_from,effective_from,ownership_interest中的字段 effective_from,TEXT,
+effective_to,effective_to,ownership_interest中的字段 effective_to,TEXT,

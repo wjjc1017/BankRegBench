@@ -1,0 +1,9 @@
+original_column_name,column_name,column_description,data_format,value_description
+operator_id,operator_id,"业务经办操作员表（operator_id 操作员编号, staff_id 员工工号, org_unit_id 机构单元编号）中的字段 operator_id",TEXT,"示例值: OP-STAFF-00001, OP-STAFF-00004, OP-STAFF-00007, OP-STAFF-00010, OP-STAFF-00013, OP-STAFF-00016"
+staff_id,staff_id,"业务经办操作员表（operator_id 操作员编号, staff_id 员工工号, org_unit_id 机构单元编号）中的字段 staff_id",TEXT,"示例值: STAFF-00001, STAFF-00004, STAFF-00007, STAFF-00010, STAFF-00013, STAFF-00016"
+org_unit_id,org_unit_id,"业务经办操作员表（operator_id 操作员编号, staff_id 员工工号, org_unit_id 机构单元编号）中的字段 org_unit_id",TEXT,"示例值: INST-001-B03, INST-001-HQ, INST-002-B03, INST-002-HQ, INST-003-B02, INST-003-B05"
+operator_kind,operator_kind,"业务经办操作员表（operator_id 操作员编号, staff_id 员工工号, org_unit_id 机构单元编号）中的字段 operator_kind",TEXT,"示例值: TELLER, SUPERVISOR, CREDIT_OFFICER"
+authority_level,authority_level,"业务经办操作员表（operator_id 操作员编号, staff_id 员工工号, org_unit_id 机构单元编号）中的字段 authority_level",TEXT,"示例值: L1, L3, L2"
+activated_on,activated_on,"业务经办操作员表（operator_id 操作员编号, staff_id 员工工号, org_unit_id 机构单元编号）中的字段 activated_on",TEXT,示例值: 2016-01-01
+deactivated_on,deactivated_on,"业务经办操作员表（operator_id 操作员编号, staff_id 员工工号, org_unit_id 机构单元编号）中的字段 deactivated_on",TEXT,
+status,status,"业务经办操作员表（operator_id 操作员编号, staff_id 员工工号, org_unit_id 机构单元编号）中的字段 status",TEXT,示例值: ACTIVE

@@ -1,0 +1,9 @@
+original_column_name,column_name,column_description,data_format,value_description
+valuation_id,valuation_id,"抵质押物评估价值表（valuation_id, collateral_id 抵押物编号, valued_on 评估日期, valuation_amount 评估价值）中的字段 valuation_id",TEXT,"示例值: VAL-COL-00001-0, VAL-COL-00002-0, VAL-COL-00003-0, VAL-COL-00004-0, VAL-COL-00005-0, VAL-COL-00005-1"
+collateral_id,collateral_id,"抵质押物评估价值表（valuation_id, collateral_id 抵押物编号, valued_on 评估日期, valuation_amount 评估价值）中的字段 collateral_id",TEXT,"示例值: COL-00001, COL-00002, COL-00003, COL-00004, COL-00005, COL-00006"
+valued_on,valued_on,"抵质押物评估价值表（valuation_id, collateral_id 抵押物编号, valued_on 评估日期, valuation_amount 评估价值）中的字段 valued_on",TEXT,"示例值: 2025-09-21, 2025-04-07, 2026-04-25, 2026-01-21, 2026-06-10, 2026-05-18"
+valuation_amount,valuation_amount,"抵质押物评估价值表（valuation_id, collateral_id 抵押物编号, valued_on 评估日期, valuation_amount 评估价值）中的字段 valuation_amount",REAL,"示例值: 860107530.41, 855785016.96, 669245378.07, 282650515.99, 340265716.57, 585239482.63"
+currency_code,currency_code,"抵质押物评估价值表（valuation_id, collateral_id 抵押物编号, valued_on 评估日期, valuation_amount 评估价值）中的字段 currency_code",TEXT,示例值: CNY
+valuation_type,valuation_type,"抵质押物评估价值表（valuation_id, collateral_id 抵押物编号, valued_on 评估日期, valuation_amount 评估价值）中的字段 valuation_type",TEXT,"示例值: EXTERNAL, INTERNAL"
+appraiser_kind,appraiser_kind,"抵质押物评估价值表（valuation_id, collateral_id 抵押物编号, valued_on 评估日期, valuation_amount 评估价值）中的字段 appraiser_kind",TEXT,"示例值: BANK_INTERNAL, APPRAISAL_FIRM"
+valid_until,valid_until,"抵质押物评估价值表（valuation_id, collateral_id 抵押物编号, valued_on 评估日期, valuation_amount 评估价值）中的字段 valid_until",TEXT,示例值: 2026-12-31

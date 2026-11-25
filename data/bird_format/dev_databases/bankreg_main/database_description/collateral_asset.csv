@@ -1,0 +1,7 @@
+original_column_name,column_name,column_description,data_format,value_description
+collateral_id,collateral_id,"抵质押物主表（collateral_id 抵押物编号, owner_party_id 所有权人客户编号, collateral_type 抵押物类型, asset_label 抵押物名称, status 抵押物状态 ACTIVE有效/RELEASED已释放）中的字段 collateral_id",TEXT,"示例值: COL-00001, COL-00002, COL-00003, COL-00004, COL-00005, COL-00006"
+owner_party_id,owner_party_id,"抵质押物主表（collateral_id 抵押物编号, owner_party_id 所有权人客户编号, collateral_type 抵押物类型, asset_label 抵押物名称, status 抵押物状态 ACTIVE有效/RELEASED已释放）中的字段 owner_party_id",TEXT,"示例值: PTY-C00001, PTY-C00002, PTY-C00003, PTY-C00005, PTY-C00006, PTY-C00007"
+collateral_type,collateral_type,"抵质押物主表（collateral_id 抵押物编号, owner_party_id 所有权人客户编号, collateral_type 抵押物类型, asset_label 抵押物名称, status 抵押物状态 ACTIVE有效/RELEASED已释放）中的字段 collateral_type",TEXT,"示例值: EQUIPMENT, EQUITY, LAND_USE_RIGHT, DEPOSIT, RECEIVABLE, REAL_ESTATE"
+asset_label,asset_label,"抵质押物主表（collateral_id 抵押物编号, owner_party_id 所有权人客户编号, collateral_type 抵押物类型, asset_label 抵押物名称, status 抵押物状态 ACTIVE有效/RELEASED已释放）中的字段 asset_label",TEXT,"示例值: 抵押物00001, 抵押物00002, 抵押物00003, 抵押物00004, 抵押物00005, 抵押物00006"
+currency_code,currency_code,"抵质押物主表（collateral_id 抵押物编号, owner_party_id 所有权人客户编号, collateral_type 抵押物类型, asset_label 抵押物名称, status 抵押物状态 ACTIVE有效/RELEASED已释放）中的字段 currency_code",TEXT,示例值: CNY
+status,status,"抵质押物主表（collateral_id 抵押物编号, owner_party_id 所有权人客户编号, collateral_type 抵押物类型, asset_label 抵押物名称, status 抵押物状态 ACTIVE有效/RELEASED已释放）中的字段 status",TEXT,"示例值: ACTIVE, RELEASED"

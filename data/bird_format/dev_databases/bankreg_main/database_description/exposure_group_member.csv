@@ -1,0 +1,6 @@
+original_column_name,column_name,column_description,data_format,value_description
+exposure_member_id,exposure_member_id,"敞口集团成员表（exposure_member_id, exposure_group_id 集团编号, party_id 成员客户编号）中的字段 exposure_member_id",TEXT,"示例值: EGM-EG-0001-PTY-C00032, EGM-EG-0001-PTY-C00048, EGM-EG-0001-PTY-C00234, EGM-EG-0001-PTY-C00402, EGM-EG-0001-PTY-C00436, EGM-EG-0001-PTY-C00527"
+exposure_group_id,exposure_group_id,"敞口集团成员表（exposure_member_id, exposure_group_id 集团编号, party_id 成员客户编号）中的字段 exposure_group_id",TEXT,"示例值: EG-0001, EG-0002, EG-0003, EG-0004, EG-0005, EG-0006"
+party_id,party_id,"敞口集团成员表（exposure_member_id, exposure_group_id 集团编号, party_id 成员客户编号）中的字段 party_id",TEXT,"示例值: PTY-C00001, PTY-C00002, PTY-C00003, PTY-C00004, PTY-C00010, PTY-C00011"
+effective_from,effective_from,"敞口集团成员表（exposure_member_id, exposure_group_id 集团编号, party_id 成员客户编号）中的字段 effective_from",TEXT,"示例值: 2020-01-07, 2020-01-11, 2020-01-19, 2020-01-23, 2020-01-28, 2020-02-01"
+effective_to,effective_to,"敞口集团成员表（exposure_member_id, exposure_group_id 集团编号, party_id 成员客户编号）中的字段 effective_to",TEXT,

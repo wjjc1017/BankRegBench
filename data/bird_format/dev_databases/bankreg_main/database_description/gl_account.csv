@@ -1,0 +1,9 @@
+original_column_name,column_name,column_description,data_format,value_description
+gl_account_id,gl_account_id,gl_account中的字段 gl_account_id,TEXT,
+institution_id,institution_id,gl_account中的字段 institution_id,TEXT,
+parent_gl_account_id,parent_gl_account_id,gl_account中的字段 parent_gl_account_id,TEXT,
+account_label,account_label,gl_account中的字段 account_label,TEXT,
+account_category,account_category,gl_account中的字段 account_category,TEXT,
+balance_side,balance_side,gl_account中的字段 balance_side,TEXT,
+currency_code,currency_code,gl_account中的字段 currency_code,TEXT,
+status,status,gl_account中的字段 status,TEXT,

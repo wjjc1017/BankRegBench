@@ -1,0 +1,11 @@
+original_column_name,column_name,column_description,data_format,value_description
+investor_position_id,investor_position_id,investor_product_position中的字段 investor_position_id,TEXT,
+product_id,product_id,investor_product_position中的字段 product_id,TEXT,
+investor_party_id,investor_party_id,investor_product_position中的字段 investor_party_id,TEXT,
+as_of_date,as_of_date,investor_product_position中的字段 as_of_date,TEXT,
+currency_code,currency_code,investor_product_position中的字段 currency_code,TEXT,
+units,units,investor_product_position中的字段 units,REAL,
+position_balance,position_balance,investor_product_position中的字段 position_balance,REAL,
+converted_balance,converted_balance,investor_product_position中的字段 converted_balance,REAL,
+cost_basis,cost_basis,investor_product_position中的字段 cost_basis,REAL,
+status,status,investor_product_position中的字段 status,TEXT,

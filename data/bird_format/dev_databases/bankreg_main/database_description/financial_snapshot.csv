@@ -1,0 +1,10 @@
+original_column_name,column_name,column_description,data_format,value_description
+financial_snapshot_id,financial_snapshot_id,financial_snapshot中的字段 financial_snapshot_id,TEXT,"示例值: FIN-INST-001, FIN-INST-002, FIN-INST-003, FIN-INST-004, FIN-INST-005, FIN-INST-006"
+party_id,party_id,financial_snapshot中的字段 party_id,TEXT,"示例值: PTY-INST-001, PTY-INST-002, PTY-INST-003, PTY-INST-004, PTY-INST-005, PTY-INST-006"
+as_of_date,as_of_date,financial_snapshot中的字段 as_of_date,TEXT,示例值: 2026-06-30
+currency_code,currency_code,financial_snapshot中的字段 currency_code,TEXT,示例值: CNY
+total_assets,total_assets,financial_snapshot中的字段 total_assets,REAL,"示例值: 987370174089.85, 556484020990.71, 104288861625.66, 265745167146.24, 7382493786.23, 54096628266.66"
+total_liabilities,total_liabilities,financial_snapshot中的字段 total_liabilities,REAL,"示例值: 54955899364.78, 31108832653.78, 9042085282.47, 18239877241.14, 651588695.22, 4163547022.56"
+net_assets,net_assets,financial_snapshot中的字段 net_assets,REAL,"示例值: 5492862188.33, 2288701670.28, 714892616.93, 1530199966.16, 44464573.92, 677124051.91"
+annual_revenue,annual_revenue,financial_snapshot中的字段 annual_revenue,REAL,"示例值: 6382564004.51, 5533559688.04, 933836971.85, 1639450060.51, 74697363.45, 774197627.6"
+source_kind,source_kind,financial_snapshot中的字段 source_kind,TEXT,示例值: REGULATORY_REPORT

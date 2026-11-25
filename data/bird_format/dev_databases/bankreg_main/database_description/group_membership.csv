@@ -1,0 +1,7 @@
+original_column_name,column_name,column_description,data_format,value_description
+membership_id,membership_id,group_membership中的字段 membership_id,TEXT,
+group_party_id,group_party_id,group_membership中的字段 group_party_id,TEXT,
+member_party_id,member_party_id,group_membership中的字段 member_party_id,TEXT,
+membership_type,membership_type,group_membership中的字段 membership_type,TEXT,
+effective_from,effective_from,group_membership中的字段 effective_from,TEXT,
+effective_to,effective_to,group_membership中的字段 effective_to,TEXT,

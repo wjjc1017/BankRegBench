@@ -1,0 +1,9 @@
+original_column_name,column_name,column_description,data_format,value_description
+relation_id,relation_id,"关联方关系表（relation_id, source_party_id 源主体客户编号, target_party_id 目标主体客户编号, relation_type 关联关系类型代码）中的字段 relation_id",TEXT,"示例值: REL-00001, REL-00002, REL-00003, REL-00004, REL-00005, REL-00006"
+source_party_id,source_party_id,"关联方关系表（relation_id, source_party_id 源主体客户编号, target_party_id 目标主体客户编号, relation_type 关联关系类型代码）中的字段 source_party_id",TEXT,"示例值: PTY-C00002, PTY-C00004, PTY-C00014, PTY-C00025, PTY-C00027, PTY-C00029"
+target_party_id,target_party_id,"关联方关系表（relation_id, source_party_id 源主体客户编号, target_party_id 目标主体客户编号, relation_type 关联关系类型代码）中的字段 target_party_id",TEXT,"示例值: PTY-C00006, PTY-C00024, PTY-C00027, PTY-C00028, PTY-C00033, PTY-C00039"
+relation_type,relation_type,"关联方关系表（relation_id, source_party_id 源主体客户编号, target_party_id 目标主体客户编号, relation_type 关联关系类型代码）中的字段 relation_type",TEXT,"示例值: NON_RELATED, SENIOR_MANAGER, AFFILIATE, COMMON_CONTROL, SHADOW_SHAREHOLDER, DE_FACTO_CONTROLLER"
+effective_from,effective_from,"关联方关系表（relation_id, source_party_id 源主体客户编号, target_party_id 目标主体客户编号, relation_type 关联关系类型代码）中的字段 effective_from",TEXT,"示例值: 2018-01-11, 2018-03-01, 2018-05-09, 2018-05-16, 2018-06-04, 2018-07-21"
+effective_to,effective_to,"关联方关系表（relation_id, source_party_id 源主体客户编号, target_party_id 目标主体客户编号, relation_type 关联关系类型代码）中的字段 effective_to",TEXT,
+confidence_level,confidence_level,"关联方关系表（relation_id, source_party_id 源主体客户编号, target_party_id 目标主体客户编号, relation_type 关联关系类型代码）中的字段 confidence_level",TEXT,"示例值: 0.58, 0.97, 0.79, 0.73, 0.99, 0.77"
+source_kind,source_kind,"关联方关系表（relation_id, source_party_id 源主体客户编号, target_party_id 目标主体客户编号, relation_type 关联关系类型代码）中的字段 source_kind",TEXT,"示例值: SELF_DECLARED, REGISTRY, MEDIA"

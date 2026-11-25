@@ -1,0 +1,8 @@
+original_column_name,column_name,column_description,data_format,value_description
+secured_obligation_id,secured_obligation_id,"被担保主债权桥接表（secured_obligation_id, security_id 担保合同编号, agreement_id 授信协议编号, covered_amount 担保覆盖金额）中的字段 secured_obligation_id",TEXT,"示例值: SO-SEC-00001, SO-SEC-00002, SO-SEC-00003, SO-SEC-00004, SO-SEC-00005, SO-SEC-00006"
+security_id,security_id,"被担保主债权桥接表（secured_obligation_id, security_id 担保合同编号, agreement_id 授信协议编号, covered_amount 担保覆盖金额）中的字段 security_id",TEXT,"示例值: SEC-00001, SEC-00002, SEC-00003, SEC-00004, SEC-00005, SEC-00006"
+agreement_id,agreement_id,"被担保主债权桥接表（secured_obligation_id, security_id 担保合同编号, agreement_id 授信协议编号, covered_amount 担保覆盖金额）中的字段 agreement_id",TEXT,"示例值: AGR-000001, AGR-000002, AGR-000003, AGR-000004, AGR-000006, AGR-000007"
+instrument_id,instrument_id,"被担保主债权桥接表（secured_obligation_id, security_id 担保合同编号, agreement_id 授信协议编号, covered_amount 担保覆盖金额）中的字段 instrument_id",TEXT,
+covered_amount,covered_amount,"被担保主债权桥接表（secured_obligation_id, security_id 担保合同编号, agreement_id 授信协议编号, covered_amount 担保覆盖金额）中的字段 covered_amount",REAL,"示例值: 247893065.36, 3742476.35, 372180410.05, 342358984.56, 245363222.14, 492650428.11"
+effective_from,effective_from,"被担保主债权桥接表（secured_obligation_id, security_id 担保合同编号, agreement_id 授信协议编号, covered_amount 担保覆盖金额）中的字段 effective_from",TEXT,"示例值: 2023-01-07, 2023-01-08, 2023-01-09, 2023-01-10, 2023-01-11, 2023-01-15"
+effective_to,effective_to,"被担保主债权桥接表（secured_obligation_id, security_id 担保合同编号, agreement_id 授信协议编号, covered_amount 担保覆盖金额）中的字段 effective_to",TEXT,示例值: 2028-12-31

@@ -1,0 +1,7 @@
+original_column_name,column_name,column_description,data_format,value_description
+exposure_group_id,exposure_group_id,"集团客户与关联敞口集团表（exposure_group_id 集团编号, institution_id 主办机构编号, group_name 集团名称, group_type 集团类型）中的字段 exposure_group_id",TEXT,"示例值: EG-0001, EG-0002, EG-0003, EG-0004, EG-0005, EG-0006"
+institution_id,institution_id,"集团客户与关联敞口集团表（exposure_group_id 集团编号, institution_id 主办机构编号, group_name 集团名称, group_type 集团类型）中的字段 institution_id",TEXT,"示例值: INST-001, INST-002, INST-003, INST-004, INST-005, INST-006"
+group_name,group_name,"集团客户与关联敞口集团表（exposure_group_id 集团编号, institution_id 主办机构编号, group_name 集团名称, group_type 集团类型）中的字段 group_name",TEXT,"示例值: 集团客户群001, 集团客户群002, 集团客户群003, 集团客户群004, 集团客户群005, 集团客户群006"
+group_type,group_type,"集团客户与关联敞口集团表（exposure_group_id 集团编号, institution_id 主办机构编号, group_name 集团名称, group_type 集团类型）中的字段 group_type",TEXT,"示例值: GROUP_CUSTOMER, CONNECTED_CUSTOMER"
+effective_from,effective_from,"集团客户与关联敞口集团表（exposure_group_id 集团编号, institution_id 主办机构编号, group_name 集团名称, group_type 集团类型）中的字段 effective_from",TEXT,"示例值: 2020-01-09, 2020-02-11, 2020-02-20, 2020-02-27, 2020-03-15, 2020-03-24"
+effective_to,effective_to,"集团客户与关联敞口集团表（exposure_group_id 集团编号, institution_id 主办机构编号, group_name 集团名称, group_type 集团类型）中的字段 effective_to",TEXT,

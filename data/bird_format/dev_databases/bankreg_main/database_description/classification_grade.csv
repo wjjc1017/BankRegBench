@@ -1,0 +1,6 @@
+original_column_name,column_name,column_description,data_format,value_description
+grade_code,grade_code,"贷款五级分类等级受控词表（grade_code 等级代码, grade_name_zh 等级中文名称 正常/关注/次级/可疑/损失, grade_ordinal 级次序数 1-5, is_nonperforming 是否不良 1不良/0非不良）中的字段 grade_code",TEXT,"示例值: DOUBTFUL, LOSS, NORMAL, SPECIAL_MENTION, SUBSTANDARD"
+grade_name_zh,grade_name_zh,"贷款五级分类等级受控词表（grade_code 等级代码, grade_name_zh 等级中文名称 正常/关注/次级/可疑/损失, grade_ordinal 级次序数 1-5, is_nonperforming 是否不良 1不良/0非不良）中的字段 grade_name_zh",TEXT,"示例值: 正常, 关注, 次级, 可疑, 损失"
+grade_name_en,grade_name_en,"贷款五级分类等级受控词表（grade_code 等级代码, grade_name_zh 等级中文名称 正常/关注/次级/可疑/损失, grade_ordinal 级次序数 1-5, is_nonperforming 是否不良 1不良/0非不良）中的字段 grade_name_en",TEXT,"示例值: Normal, Special mention, Substandard, Doubtful, Loss"
+grade_ordinal,grade_ordinal,"贷款五级分类等级受控词表（grade_code 等级代码, grade_name_zh 等级中文名称 正常/关注/次级/可疑/损失, grade_ordinal 级次序数 1-5, is_nonperforming 是否不良 1不良/0非不良）中的字段 grade_ordinal",INTEGER,"示例值: 1, 2, 3, 4, 5"
+is_nonperforming,is_nonperforming,"贷款五级分类等级受控词表（grade_code 等级代码, grade_name_zh 等级中文名称 正常/关注/次级/可疑/损失, grade_ordinal 级次序数 1-5, is_nonperforming 是否不良 1不良/0非不良）中的字段 is_nonperforming",INTEGER,"示例值: 0, 1"

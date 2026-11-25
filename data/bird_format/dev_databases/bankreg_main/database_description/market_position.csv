@@ -1,0 +1,9 @@
+original_column_name,column_name,column_description,data_format,value_description
+position_id,position_id,market_position中的字段 position_id,TEXT,
+institution_id,institution_id,market_position中的字段 institution_id,TEXT,
+instrument_id,instrument_id,market_position中的字段 instrument_id,TEXT,
+as_of_date,as_of_date,market_position中的字段 as_of_date,TEXT,
+quantity,quantity,market_position中的字段 quantity,REAL,
+carrying_amount,carrying_amount,market_position中的字段 carrying_amount,REAL,
+fair_value,fair_value,market_position中的字段 fair_value,REAL,
+currency_code,currency_code,market_position中的字段 currency_code,TEXT,

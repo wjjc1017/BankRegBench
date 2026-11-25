@@ -1,0 +1,8 @@
+original_column_name,column_name,column_description,data_format,value_description
+institution_id,institution_id,"银行法人机构信息表（institution_id 机构编号, institution_name 机构名称, institution_type 机构类型）中的字段 institution_id",TEXT,"示例值: INST-001, INST-002, INST-003, INST-004, INST-005, INST-006"
+institution_name,institution_name,"银行法人机构信息表（institution_id 机构编号, institution_name 机构名称, institution_type 机构类型）中的字段 institution_name",TEXT,"示例值: 华东银行股份有限公司, 华南银行股份有限公司, 北方农村商业银行, 西部城市商业银行, 东海村镇银行, 中原民营银行"
+institution_type,institution_type,"银行法人机构信息表（institution_id 机构编号, institution_name 机构名称, institution_type 机构类型）中的字段 institution_type",TEXT,"示例值: COMMERCIAL_BANK, RURAL_COMMERCIAL_BANK, CITY_COMMERCIAL_BANK, VILLAGE_BANK, PRIVATE_BANK"
+country_code,country_code,"银行法人机构信息表（institution_id 机构编号, institution_name 机构名称, institution_type 机构类型）中的字段 country_code",TEXT,示例值: CN
+region_code,region_code,"银行法人机构信息表（institution_id 机构编号, institution_name 机构名称, institution_type 机构类型）中的字段 region_code",TEXT,"示例值: 110000, 310000, 440300, 330100, 510100"
+established_on,established_on,"银行法人机构信息表（institution_id 机构编号, institution_name 机构名称, institution_type 机构类型）中的字段 established_on",TEXT,"示例值: 2005-01-01, 2006-01-01, 2007-01-01, 2008-01-01, 2009-01-01, 2010-01-01"
+status,status,"银行法人机构信息表（institution_id 机构编号, institution_name 机构名称, institution_type 机构类型）中的字段 status",TEXT,示例值: ACTIVE

@@ -1,0 +1,9 @@
+original_column_name,column_name,column_description,data_format,value_description
+resolution_id,resolution_id,asset_resolution_event中的字段 resolution_id,TEXT,
+loan_id,loan_id,asset_resolution_event中的字段 loan_id,TEXT,
+event_type,event_type,asset_resolution_event中的字段 event_type,TEXT,
+event_date,event_date,asset_resolution_event中的字段 event_date,TEXT,
+amount,amount,asset_resolution_event中的字段 amount,REAL,
+currency_code,currency_code,asset_resolution_event中的字段 currency_code,TEXT,
+counterparty_party_id,counterparty_party_id,asset_resolution_event中的字段 counterparty_party_id,TEXT,
+status,status,asset_resolution_event中的字段 status,TEXT,

@@ -1,0 +1,8 @@
+original_column_name,column_name,column_description,data_format,value_description
+reference_rate_id,reference_rate_id,reference_rate中的字段 reference_rate_id,TEXT,
+rate_name,rate_name,reference_rate中的字段 rate_name,TEXT,
+tenor_code,tenor_code,reference_rate中的字段 tenor_code,TEXT,
+effective_date,effective_date,reference_rate中的字段 effective_date,TEXT,
+rate_value,rate_value,reference_rate中的字段 rate_value,REAL,
+currency_code,currency_code,reference_rate中的字段 currency_code,TEXT,
+source_kind,source_kind,reference_rate中的字段 source_kind,TEXT,

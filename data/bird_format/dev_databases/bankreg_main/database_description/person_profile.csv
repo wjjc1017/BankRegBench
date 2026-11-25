@@ -1,0 +1,7 @@
+original_column_name,column_name,column_description,data_format,value_description
+party_id,party_id,"个人客户画像表（party_id 客户编号, occupation_code 职业, annual_income 年收入, is_public_official 是否公职人员）中的字段 party_id",TEXT,"示例值: PTY-P00001, PTY-P00002, PTY-P00003, PTY-P00004, PTY-P00005, PTY-P00006"
+occupation_code,occupation_code,"个人客户画像表（party_id 客户编号, occupation_code 职业, annual_income 年收入, is_public_official 是否公职人员）中的字段 occupation_code",TEXT,"示例值: BANKING, TEACHER, CIVIL_SERVANT, SALES, OTHER, ENGINEER"
+employment_sector,employment_sector,"个人客户画像表（party_id 客户编号, occupation_code 职业, annual_income 年收入, is_public_official 是否公职人员）中的字段 employment_sector",TEXT,"示例值: FINANCE, WHOLESALE_RETAIL, UTILITIES, HOSPITALITY, AGRICULTURE, PHOTOVOLTAIC"
+employer_party_id,employer_party_id,"个人客户画像表（party_id 客户编号, occupation_code 职业, annual_income 年收入, is_public_official 是否公职人员）中的字段 employer_party_id",TEXT,
+annual_income,annual_income,"个人客户画像表（party_id 客户编号, occupation_code 职业, annual_income 年收入, is_public_official 是否公职人员）中的字段 annual_income",REAL,"示例值: 529000.0, 276000.0, 326000.0, 458000.0, 640000.0, 203000.0"
+is_public_official,is_public_official,"个人客户画像表（party_id 客户编号, occupation_code 职业, annual_income 年收入, is_public_official 是否公职人员）中的字段 is_public_official",INTEGER,"示例值: 0, 1"

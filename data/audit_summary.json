@@ -1,0 +1,12 @@
+{
+  "total_questions": 500,
+  "programmatic_warning_questions": 0,
+  "llm_flagged_questions": 0,
+  "total_flagged_questions": 0,
+  "all_passed": true,
+  "audit_protocol": {
+    "gate_a": "Programmatic predicate ablation (WHERE/HAVING tautology detection)",
+    "gate_b": "Foreign-key join path & 1:N chasm-trap fan-out guard",
+    "gate_c": "3-way semantic consistency audit (Question <-> Gold SQL <-> Simulated Warehouse)"
+  }
+}

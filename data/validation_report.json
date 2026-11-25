@@ -1,0 +1,31 @@
+{
+ "questions": 500,
+ "distinct_sql_skeletons": 500,
+ "schema_tables": 84,
+ "tables_referenced": 64,
+ "warehouse_rows": 74184,
+ "by_difficulty": {
+  "easy": 60,
+  "medium": 172,
+  "hard": 204,
+  "extra": 64
+ },
+ "by_split": {
+  "dev": 98,
+  "train": 300,
+  "test": 102
+ },
+ "by_num_tables": {
+  "1": 65,
+  "2": 150,
+  "3": 114,
+  "4": 88,
+  "5": 40,
+  "6": 32,
+  "7": 9,
+  "8": 2
+ },
+ "foreign_key_violations": 0,
+ "integrity_check": "ok",
+ "failures": []
+}

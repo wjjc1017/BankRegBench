@@ -1,0 +1,3 @@
+original_column_name,column_name,column_description,data_format,value_description
+instrument_type,instrument_type,instrument_type_catalog中的字段 instrument_type,TEXT,"示例值: BANK_ACCEPTANCE_DRAFT, COMMERCIAL_ACCEPTANCE_DRAFT, LETTER_OF_CREDIT"
+name_zh,name_zh,instrument_type_catalog中的字段 name_zh,TEXT,"示例值: 银行承兑汇票, 商业承兑汇票, 信用证"

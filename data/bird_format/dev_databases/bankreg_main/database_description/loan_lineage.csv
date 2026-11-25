@@ -1,0 +1,7 @@
+original_column_name,column_name,column_description,data_format,value_description
+lineage_id,lineage_id,loan_lineage中的字段 lineage_id,TEXT,
+predecessor_loan_id,predecessor_loan_id,loan_lineage中的字段 predecessor_loan_id,TEXT,
+successor_loan_id,successor_loan_id,loan_lineage中的字段 successor_loan_id,TEXT,
+relationship_type,relationship_type,loan_lineage中的字段 relationship_type,TEXT,
+linked_on,linked_on,loan_lineage中的字段 linked_on,TEXT,
+rationale,rationale,loan_lineage中的字段 rationale,TEXT,

@@ -1,0 +1,6 @@
+original_column_name,column_name,column_description,data_format,value_description
+account_id,account_id,"定期存款账户表（account_id 账户编号, opening_principal 开户本金, booked_on 起息日, maturity_on 到期日, annual_interest_rate 年利率）中的字段 account_id",TEXT,"示例值: ACC-000010, ACC-000023, ACC-000037, ACC-000052, ACC-000058, ACC-000066"
+opening_principal,opening_principal,"定期存款账户表（account_id 账户编号, opening_principal 开户本金, booked_on 起息日, maturity_on 到期日, annual_interest_rate 年利率）中的字段 opening_principal",REAL,"示例值: 90811.34, 7066799.25, 19442346.7, 11011118.38, 14316504.74, 6423326.52"
+booked_on,booked_on,"定期存款账户表（account_id 账户编号, opening_principal 开户本金, booked_on 起息日, maturity_on 到期日, annual_interest_rate 年利率）中的字段 booked_on",TEXT,"示例值: 2025-05-29, 2026-02-28, 2025-12-27, 2025-08-02, 2025-12-16, 2026-05-22"
+maturity_on,maturity_on,"定期存款账户表（account_id 账户编号, opening_principal 开户本金, booked_on 起息日, maturity_on 到期日, annual_interest_rate 年利率）中的字段 maturity_on",TEXT,"示例值: 2026-05-29, 2029-02-27, 2026-03-27, 2026-08-02, 2026-12-16, 2028-05-21"
+annual_interest_rate,annual_interest_rate,"定期存款账户表（account_id 账户编号, opening_principal 开户本金, booked_on 起息日, maturity_on 到期日, annual_interest_rate 年利率）中的字段 annual_interest_rate",REAL,"示例值: 1.102, 2.876, 3.415, 3.592, 1.362, 1.305"

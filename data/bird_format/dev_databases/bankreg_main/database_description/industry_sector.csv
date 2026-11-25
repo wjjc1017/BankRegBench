@@ -1,0 +1,6 @@
+original_column_name,column_name,column_description,data_format,value_description
+sector_code,sector_code,"行业分类受控词表（sector_code 行业代码, sector_name_zh 行业中文名称, risk_category 风险类别 NORMAL/RESTRICTED限制类/EXIT退出类）中的字段 sector_code",TEXT,"示例值: AGRICULTURE, COAL, CONSTRUCTION, CULTURE, EDUCATION, HEALTHCARE"
+sector_name_zh,sector_name_zh,"行业分类受控词表（sector_code 行业代码, sector_name_zh 行业中文名称, risk_category 风险类别 NORMAL/RESTRICTED限制类/EXIT退出类）中的字段 sector_name_zh",TEXT,"示例值: 房地产业, 证券期货业, 地方政府融资平台, 制造业, 批发和零售业, 建筑业"
+sector_name_en,sector_name_en,"行业分类受控词表（sector_code 行业代码, sector_name_zh 行业中文名称, risk_category 风险类别 NORMAL/RESTRICTED限制类/EXIT退出类）中的字段 sector_name_en",TEXT,"示例值: Real estate, Securities and futures, Local government financing vehicle, Manufacturing, Wholesale and retail, Construction"
+parent_sector_code,parent_sector_code,"行业分类受控词表（sector_code 行业代码, sector_name_zh 行业中文名称, risk_category 风险类别 NORMAL/RESTRICTED限制类/EXIT退出类）中的字段 parent_sector_code",TEXT,
+risk_category,risk_category,"行业分类受控词表（sector_code 行业代码, sector_name_zh 行业中文名称, risk_category 风险类别 NORMAL/RESTRICTED限制类/EXIT退出类）中的字段 risk_category",TEXT,"示例值: RESTRICTED, NORMAL, EXIT"

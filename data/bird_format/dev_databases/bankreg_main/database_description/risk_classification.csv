@@ -1,0 +1,8 @@
+original_column_name,column_name,column_description,data_format,value_description
+classification_id,classification_id,"贷款风险五级分类结果表（classification_id, loan_id 借据编号, as_of_date 分类日期, grade_code 五级分类代码）中的字段 classification_id",TEXT,"示例值: RC-LOAN-000001, RC-LOAN-000002, RC-LOAN-000003, RC-LOAN-000004, RC-LOAN-000005, RC-LOAN-000006"
+loan_id,loan_id,"贷款风险五级分类结果表（classification_id, loan_id 借据编号, as_of_date 分类日期, grade_code 五级分类代码）中的字段 loan_id",TEXT,"示例值: LOAN-000001, LOAN-000002, LOAN-000003, LOAN-000004, LOAN-000005, LOAN-000006"
+as_of_date,as_of_date,"贷款风险五级分类结果表（classification_id, loan_id 借据编号, as_of_date 分类日期, grade_code 五级分类代码）中的字段 as_of_date",TEXT,示例值: 2026-06-30
+grade_code,grade_code,"贷款风险五级分类结果表（classification_id, loan_id 借据编号, as_of_date 分类日期, grade_code 五级分类代码）中的字段 grade_code",TEXT,"示例值: DOUBTFUL, LOSS, NORMAL, SPECIAL_MENTION, SUBSTANDARD"
+classification_basis,classification_basis,"贷款风险五级分类结果表（classification_id, loan_id 借据编号, as_of_date 分类日期, grade_code 五级分类代码）中的字段 classification_basis",TEXT,"示例值: AUTOMATIC, MANUAL_REVIEW"
+assessed_org_unit_id,assessed_org_unit_id,"贷款风险五级分类结果表（classification_id, loan_id 借据编号, as_of_date 分类日期, grade_code 五级分类代码）中的字段 assessed_org_unit_id",TEXT,"示例值: INST-001-B01, INST-001-B02, INST-001-B03, INST-001-B04, INST-001-B05, INST-001-HQ"
+assessed_by_staff_id,assessed_by_staff_id,"贷款风险五级分类结果表（classification_id, loan_id 借据编号, as_of_date 分类日期, grade_code 五级分类代码）中的字段 assessed_by_staff_id",TEXT,

@@ -1,0 +1,9 @@
+original_column_name,column_name,column_description,data_format,value_description
+participant_id,participant_id,credit_participant中的字段 participant_id,TEXT,
+agreement_id,agreement_id,credit_participant中的字段 agreement_id,TEXT,
+party_id,party_id,credit_participant中的字段 party_id,TEXT,
+participant_role,participant_role,credit_participant中的字段 participant_role,TEXT,
+commitment_amount,commitment_amount,credit_participant中的字段 commitment_amount,REAL,
+participation_ratio,participation_ratio,credit_participant中的字段 participation_ratio,REAL,
+effective_from,effective_from,credit_participant中的字段 effective_from,TEXT,
+effective_to,effective_to,credit_participant中的字段 effective_to,TEXT,

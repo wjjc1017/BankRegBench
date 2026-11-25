@@ -1,0 +1,9 @@
+original_column_name,column_name,column_description,data_format,value_description
+staff_id,staff_id,"银行员工表（staff_id 员工工号, person_party_id 员工个人客户编号, home_org_unit_id 所属机构单元）中的字段 staff_id",TEXT,"示例值: STAFF-00001, STAFF-00002, STAFF-00003, STAFF-00004, STAFF-00005, STAFF-00006"
+person_party_id,person_party_id,"银行员工表（staff_id 员工工号, person_party_id 员工个人客户编号, home_org_unit_id 所属机构单元）中的字段 person_party_id",TEXT,"示例值: PTY-S00001, PTY-S00002, PTY-S00003, PTY-S00004, PTY-S00005, PTY-S00006"
+home_org_unit_id,home_org_unit_id,"银行员工表（staff_id 员工工号, person_party_id 员工个人客户编号, home_org_unit_id 所属机构单元）中的字段 home_org_unit_id",TEXT,"示例值: INST-001-B01, INST-001-B02, INST-001-B03, INST-001-B04, INST-001-B05, INST-001-HQ"
+employment_type,employment_type,"银行员工表（staff_id 员工工号, person_party_id 员工个人客户编号, home_org_unit_id 所属机构单元）中的字段 employment_type",TEXT,"示例值: CONTRACT, PERMANENT"
+employment_status,employment_status,"银行员工表（staff_id 员工工号, person_party_id 员工个人客户编号, home_org_unit_id 所属机构单元）中的字段 employment_status",TEXT,示例值: ACTIVE
+hired_on,hired_on,"银行员工表（staff_id 员工工号, person_party_id 员工个人客户编号, home_org_unit_id 所属机构单元）中的字段 hired_on",TEXT,"示例值: 2015-07-19, 2018-12-18, 2017-03-29, 2022-05-20, 2021-10-07, 2020-11-24"
+departed_on,departed_on,"银行员工表（staff_id 员工工号, person_party_id 员工个人客户编号, home_org_unit_id 所属机构单元）中的字段 departed_on",TEXT,
+exception_flag,exception_flag,"银行员工表（staff_id 员工工号, person_party_id 员工个人客户编号, home_org_unit_id 所属机构单元）中的字段 exception_flag",INTEGER,示例值: 0

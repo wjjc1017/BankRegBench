@@ -1,0 +1,4 @@
+original_column_name,column_name,column_description,data_format,value_description
+event_code,event_code,"监管事项编码受控词表（event_code 事项代码, event_name_zh 事项中文名称, event_family 事项大类）中的字段 event_code",TEXT,"示例值: ai_001, ai_002, ai_003, ai_004, ai_005, ai_006"
+event_name_zh,event_name_zh,"监管事项编码受控词表（event_code 事项代码, event_name_zh 事项中文名称, event_family 事项大类）中的字段 event_name_zh",TEXT,"示例值: 单一集团客户授信集中度超标监测, 单一客户贷款集中度超标监测, 存贷比与流动性比例异常监测, 拨备覆盖率与贷款拨备率不达标监测, 全部关联度指标超监管阈值监测, 核心一级资本充足率逼近监管红线监测"
+rule_family,rule_family,"监管事项编码受控词表（event_code 事项代码, event_name_zh 事项中文名称, event_family 事项大类）中的字段 rule_family",TEXT,"示例值: 审慎监管指标, 监管报送, 信贷管控, 公司治理, 关联交易, 存款保护"

@@ -1,0 +1,7 @@
+# Core dataset reproduction, validation, programmatic auditing, offline scoring,
+# and error taxonomy analysis require ONLY Python >= 3.10 standard library.
+# No third-party packages are required for core benchmark usage.
+#
+# To run optional M-Schema / SchemaGate / RSL-SQL / CHESS / DeepEye-AxisSQL
+# online generation adapters, install:
+#   pip install -r requirements-eval.txt

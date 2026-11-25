@@ -1,0 +1,12 @@
+original_column_name,column_name,column_description,data_format,value_description
+exposure_id,exposure_id,risk_exposure中的字段 exposure_id,TEXT,
+institution_id,institution_id,risk_exposure中的字段 institution_id,TEXT,
+obligor_party_id,obligor_party_id,risk_exposure中的字段 obligor_party_id,TEXT,
+exposure_group_id,exposure_group_id,risk_exposure中的字段 exposure_group_id,TEXT,
+agreement_id,agreement_id,risk_exposure中的字段 agreement_id,TEXT,
+as_of_date,as_of_date,risk_exposure中的字段 as_of_date,TEXT,
+exposure_type,exposure_type,risk_exposure中的字段 exposure_type,TEXT,
+gross_exposure,gross_exposure,risk_exposure中的字段 gross_exposure,REAL,
+mitigated_exposure,mitigated_exposure,risk_exposure中的字段 mitigated_exposure,REAL,
+risk_weight,risk_weight,risk_exposure中的字段 risk_weight,REAL,
+currency_code,currency_code,risk_exposure中的字段 currency_code,TEXT,

@@ -1,0 +1,123 @@
+{
+ "db_id": "bankreg_main",
+ "num_questions": 500,
+ "num_tables_in_schema": 84,
+ "num_tables_referenced": 64,
+ "populated_tables": 64,
+ "total_rows": 74184,
+ "questions_by_difficulty": {
+  "easy": 60,
+  "extra": 64,
+  "hard": 204,
+  "medium": 172
+ },
+ "questions_by_split": {
+  "dev": 98,
+  "test": 102,
+  "train": 300
+ },
+ "questions_by_num_tables": {
+  "1": 65,
+  "2": 150,
+  "3": 114,
+  "4": 88,
+  "5": 40,
+  "6": 32,
+  "7": 9,
+  "8": 2
+ },
+ "feature_frequency": {
+  "ORDER_BY": 500,
+  "JOIN": 428,
+  "FILTER": 368,
+  "GROUP_BY": 346,
+  "COUNT": 232,
+  "SUM": 209,
+  "HAVING": 134,
+  "CTE": 103,
+  "RATIO": 84,
+  "LIMIT": 69,
+  "SELF_JOIN": 50,
+  "CASE": 50,
+  "AVG": 40,
+  "WINDOW": 38,
+  "IN": 30,
+  "IS_NULL": 23,
+  "EXISTS": 19,
+  "DATE_MATH": 17,
+  "COALESCE": 13,
+  "NOT_EXISTS": 12,
+  "LAG": 5,
+  "UNION": 4,
+  "NTILE": 3,
+  "INTERSECT": 2,
+  "LIKE": 1,
+  "EXCEPT": 1
+ },
+ "distinct_sql_skeletons": 500,
+ "most_referenced_tables": [
+  [
+   "credit_agreement",
+   201
+  ],
+  [
+   "loan_drawdown",
+   173
+  ],
+  [
+   "institution",
+   141
+  ],
+  [
+   "party",
+   107
+  ],
+  [
+   "account",
+   60
+  ],
+  [
+   "loan_balance_snapshot",
+   59
+  ],
+  [
+   "payment_event",
+   44
+  ],
+  [
+   "security_agreement",
+   32
+  ],
+  [
+   "delinquency_snapshot",
+   29
+  ],
+  [
+   "wealth_product",
+   28
+  ],
+  [
+   "account_holder",
+   28
+  ],
+  [
+   "industry_sector",
+   27
+  ],
+  [
+   "capital_snapshot",
+   25
+  ],
+  [
+   "collateral_asset",
+   24
+  ],
+  [
+   "party_relation",
+   24
+  ]
+ ],
+ "avg_question_chars": 86.3,
+ "avg_answer_rows": 118.36,
+ "problems": []
+}

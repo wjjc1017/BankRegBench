@@ -1,0 +1,237 @@
+{
+  "total_evaluations": 5600,
+  "total_strict_errors": 3144,
+  "overall_error_rate_pct": 56.14,
+  "overall_by_category": {
+    "E1_SYNTAX_EXEC_ERROR": 596,
+    "E3_VOCAB_ENUM_HALLUCINATION": 928,
+    "E5B_PREDICATE_OR_JOIN_DRIFT": 568,
+    "E5A_AGGREGATION_RATIO_WINDOW": 204,
+    "E7_PRECISION_ROUNDING_ONLY": 215,
+    "E4_BRIDGE_JOIN_PATH_DROP": 524,
+    "E6_PROJECTION_COLUMN_MISMATCH": 29,
+    "E2_DISTRACTOR_TABLE_TRAP": 80
+  },
+  "by_framework": {
+    "direct_ddl": {
+      "E1_SYNTAX_EXEC_ERROR": 101,
+      "E3_VOCAB_ENUM_HALLUCINATION": 234,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 68,
+      "E5A_AGGREGATION_RATIO_WINDOW": 24,
+      "E7_PRECISION_ROUNDING_ONLY": 24,
+      "E4_BRIDGE_JOIN_PATH_DROP": 69,
+      "E6_PROJECTION_COLUMN_MISMATCH": 4,
+      "E2_DISTRACTOR_TABLE_TRAP": 12
+    },
+    "m_schema": {
+      "E1_SYNTAX_EXEC_ERROR": 104,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 90,
+      "E4_BRIDGE_JOIN_PATH_DROP": 82,
+      "E3_VOCAB_ENUM_HALLUCINATION": 26,
+      "E5A_AGGREGATION_RATIO_WINDOW": 25,
+      "E7_PRECISION_ROUNDING_ONLY": 38,
+      "E6_PROJECTION_COLUMN_MISMATCH": 2,
+      "E2_DISTRACTOR_TABLE_TRAP": 5
+    },
+    "schemagate": {
+      "E3_VOCAB_ENUM_HALLUCINATION": 234,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 66,
+      "E1_SYNTAX_EXEC_ERROR": 150,
+      "E5A_AGGREGATION_RATIO_WINDOW": 26,
+      "E2_DISTRACTOR_TABLE_TRAP": 17,
+      "E4_BRIDGE_JOIN_PATH_DROP": 76,
+      "E7_PRECISION_ROUNDING_ONLY": 15,
+      "E6_PROJECTION_COLUMN_MISMATCH": 7
+    },
+    "dail_sql": {
+      "E3_VOCAB_ENUM_HALLUCINATION": 145,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 86,
+      "E5A_AGGREGATION_RATIO_WINDOW": 35,
+      "E7_PRECISION_ROUNDING_ONLY": 27,
+      "E4_BRIDGE_JOIN_PATH_DROP": 69,
+      "E1_SYNTAX_EXEC_ERROR": 81,
+      "E6_PROJECTION_COLUMN_MISMATCH": 2,
+      "E2_DISTRACTOR_TABLE_TRAP": 7
+    },
+    "rsl_sql": {
+      "E3_VOCAB_ENUM_HALLUCINATION": 205,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 75,
+      "E5A_AGGREGATION_RATIO_WINDOW": 27,
+      "E7_PRECISION_ROUNDING_ONLY": 24,
+      "E4_BRIDGE_JOIN_PATH_DROP": 77,
+      "E1_SYNTAX_EXEC_ERROR": 71,
+      "E2_DISTRACTOR_TABLE_TRAP": 18,
+      "E6_PROJECTION_COLUMN_MISMATCH": 4
+    },
+    "chess": {
+      "E3_VOCAB_ENUM_HALLUCINATION": 74,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 87,
+      "E5A_AGGREGATION_RATIO_WINDOW": 32,
+      "E1_SYNTAX_EXEC_ERROR": 59,
+      "E4_BRIDGE_JOIN_PATH_DROP": 70,
+      "E7_PRECISION_ROUNDING_ONLY": 40,
+      "E6_PROJECTION_COLUMN_MISMATCH": 7,
+      "E2_DISTRACTOR_TABLE_TRAP": 14
+    },
+    "deepeye_axissql": {
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 96,
+      "E5A_AGGREGATION_RATIO_WINDOW": 35,
+      "E4_BRIDGE_JOIN_PATH_DROP": 81,
+      "E1_SYNTAX_EXEC_ERROR": 30,
+      "E7_PRECISION_ROUNDING_ONLY": 47,
+      "E3_VOCAB_ENUM_HALLUCINATION": 10,
+      "E6_PROJECTION_COLUMN_MISMATCH": 3,
+      "E2_DISTRACTOR_TABLE_TRAP": 7
+    }
+  },
+  "by_model": {
+    "deepseek-v4-flash": {
+      "E1_SYNTAX_EXEC_ERROR": 85,
+      "E3_VOCAB_ENUM_HALLUCINATION": 310,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 147,
+      "E5A_AGGREGATION_RATIO_WINDOW": 73,
+      "E7_PRECISION_ROUNDING_ONLY": 43,
+      "E4_BRIDGE_JOIN_PATH_DROP": 156,
+      "E6_PROJECTION_COLUMN_MISMATCH": 8,
+      "E2_DISTRACTOR_TABLE_TRAP": 7
+    },
+    "deepseek-v4.1-flash": {
+      "E3_VOCAB_ENUM_HALLUCINATION": 206,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 127,
+      "E4_BRIDGE_JOIN_PATH_DROP": 107,
+      "E7_PRECISION_ROUNDING_ONLY": 69,
+      "E5A_AGGREGATION_RATIO_WINDOW": 39,
+      "E1_SYNTAX_EXEC_ERROR": 31,
+      "E2_DISTRACTOR_TABLE_TRAP": 5,
+      "E6_PROJECTION_COLUMN_MISMATCH": 11
+    },
+    "qwen3.5-397b-a17b": {
+      "E1_SYNTAX_EXEC_ERROR": 322,
+      "E2_DISTRACTOR_TABLE_TRAP": 14,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 141,
+      "E3_VOCAB_ENUM_HALLUCINATION": 168,
+      "E4_BRIDGE_JOIN_PATH_DROP": 120,
+      "E7_PRECISION_ROUNDING_ONLY": 50,
+      "E5A_AGGREGATION_RATIO_WINDOW": 45,
+      "E6_PROJECTION_COLUMN_MISMATCH": 4
+    },
+    "qwen3.6-35b-a3b": {
+      "E3_VOCAB_ENUM_HALLUCINATION": 244,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 153,
+      "E1_SYNTAX_EXEC_ERROR": 158,
+      "E7_PRECISION_ROUNDING_ONLY": 53,
+      "E2_DISTRACTOR_TABLE_TRAP": 54,
+      "E4_BRIDGE_JOIN_PATH_DROP": 141,
+      "E5A_AGGREGATION_RATIO_WINDOW": 47,
+      "E6_PROJECTION_COLUMN_MISMATCH": 6
+    }
+  },
+  "by_difficulty": {
+    "easy": {
+      "E1_SYNTAX_EXEC_ERROR": 36,
+      "E3_VOCAB_ENUM_HALLUCINATION": 156,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 56,
+      "E4_BRIDGE_JOIN_PATH_DROP": 35,
+      "E5A_AGGREGATION_RATIO_WINDOW": 22,
+      "E2_DISTRACTOR_TABLE_TRAP": 3,
+      "E6_PROJECTION_COLUMN_MISMATCH": 9
+    },
+    "medium": {
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 203,
+      "E3_VOCAB_ENUM_HALLUCINATION": 293,
+      "E5A_AGGREGATION_RATIO_WINDOW": 59,
+      "E1_SYNTAX_EXEC_ERROR": 217,
+      "E4_BRIDGE_JOIN_PATH_DROP": 179,
+      "E6_PROJECTION_COLUMN_MISMATCH": 15,
+      "E7_PRECISION_ROUNDING_ONLY": 19,
+      "E2_DISTRACTOR_TABLE_TRAP": 16
+    },
+    "hard": {
+      "E7_PRECISION_ROUNDING_ONLY": 153,
+      "E4_BRIDGE_JOIN_PATH_DROP": 187,
+      "E3_VOCAB_ENUM_HALLUCINATION": 372,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 246,
+      "E5A_AGGREGATION_RATIO_WINDOW": 90,
+      "E1_SYNTAX_EXEC_ERROR": 238,
+      "E2_DISTRACTOR_TABLE_TRAP": 57,
+      "E6_PROJECTION_COLUMN_MISMATCH": 1
+    },
+    "extra": {
+      "E1_SYNTAX_EXEC_ERROR": 105,
+      "E7_PRECISION_ROUNDING_ONLY": 43,
+      "E3_VOCAB_ENUM_HALLUCINATION": 107,
+      "E4_BRIDGE_JOIN_PATH_DROP": 123,
+      "E5A_AGGREGATION_RATIO_WINDOW": 33,
+      "E5B_PREDICATE_OR_JOIN_DRIFT": 63,
+      "E2_DISTRACTOR_TABLE_TRAP": 4,
+      "E6_PROJECTION_COLUMN_MISMATCH": 4
+    }
+  },
+  "representative_examples": [
+    {
+      "question_id": "BRB2-0001",
+      "difficulty": "easy",
+      "split": "dev",
+      "framework": "direct_ddl",
+      "model": "deepseek-v4-flash",
+      "category": "E1_SYNTAX_EXEC_ERROR",
+      "detail": "no such column: classification_date",
+      "question": "列出所有风险分类等级为“次级”的借据编号及其分类日期，按借据编号升序排列。",
+      "gold_sql": "SELECT rc.loan_id, rc.as_of_date\nFROM risk_classification rc\nJOIN classification_grade g ON g.grade_code = rc.grade_code\nWHERE g.grade_name_zh = '次级'\nORDER BY rc.loan_id;",
+      "predicted_sql": "SELECT loan_id, classification_date\nFROM risk_classification\nWHERE grade_code = '次级'\nORDER BY loan_id ASC;",
+      "case_title": "E1: Syntax & Phantom-Column Error"
+    },
+    {
+      "question_id": "BRB2-0007",
+      "difficulty": "easy",
+      "split": "dev",
+      "framework": "direct_ddl",
+      "model": "qwen3.5-397b-a17b",
+      "category": "E2_DISTRACTOR_TABLE_TRAP",
+      "detail": "Selected empty distractor table(s): ['asset_resolution_event']",
+      "question": "列出所有已核销的借据编号及其放款金额。",
+      "gold_sql": "SELECT ld.loan_id, ld.disbursed_amount\nFROM loan_drawdown ld\nJOIN status_catalog s ON s.entity = 'loan_drawdown' AND s.status_code = ld.status\nWHERE s.name_zh = '已核销'\nORDER BY ld.loan_id;",
+      "predicted_sql": "SELECT \n    ld.loan_id,\n    ld.disbursed_amount\nFROM \n    loan_drawdown ld\nJOIN \n    asset_resolution_event are ON ld.loan_id = are.loan_id\nWHERE \n    are.event_type = 'WRITE_OFF'\n    AND are.status = 'COMPLETED';",
+      "case_title": "E2: Distractor-Table Trap"
+    },
+    {
+      "question_id": "BRB2-0007",
+      "difficulty": "easy",
+      "split": "dev",
+      "framework": "direct_ddl",
+      "model": "deepseek-v4-flash",
+      "category": "E3_VOCAB_ENUM_HALLUCINATION",
+      "detail": "0 rows & missed catalog table(s): ['status_catalog']",
+      "question": "列出所有已核销的借据编号及其放款金额。",
+      "gold_sql": "SELECT ld.loan_id, ld.disbursed_amount\nFROM loan_drawdown ld\nJOIN status_catalog s ON s.entity = 'loan_drawdown' AND s.status_code = ld.status\nWHERE s.name_zh = '已核销'\nORDER BY ld.loan_id;",
+      "predicted_sql": "SELECT loan_id, disbursed_amount\nFROM loan_drawdown\nWHERE status = '已核销';",
+      "case_title": "E3: Vocabulary & Enum Hallucination"
+    },
+    {
+      "question_id": "BRB2-0454",
+      "difficulty": "medium",
+      "split": "dev",
+      "framework": "direct_ddl",
+      "model": "qwen3.5-397b-a17b",
+      "category": "E4_BRIDGE_JOIN_PATH_DROP",
+      "detail": "Table mismatch: gold=['capital_snapshot', 'financial_snapshot', 'institution'] pred=['financial_snapshot', 'institution']",
+      "question": "输出各银行机构的名称、净资本与总资产之比（保留六位小数），按该比值从高到低排列（机构财务数据存放在财务快照表中，其主体编号为 PTY- 加机构编号）。",
+      "gold_sql": "SELECT i.institution_name, ROUND(c.net_capital/f.total_assets,6) AS leverage_val FROM institution i JOIN capital_snapshot c ON c.institution_id=i.institution_id JOIN financial_snapshot f ON f.party_id='PTY-'||i.institution_id ORDER BY leverage_val DESC;",
+      "predicted_sql": "SELECT \n    i.institution_name,\n    ROUND(fs.net_assets * 1.0 / fs.total_assets, 6) AS capital_ratio\nFROM \n    institution i\nJOIN \n    financial_snapshot fs ON fs.party_id = 'PTY-' || i.institution_id\nORDER BY \n    capital_ratio DESC;",
+      "case_title": "E4: Bridge-Table & Core-Table Mismatch"
+    },
+    {
+      "question_id": "BRB2-0465",
+      "difficulty": "medium",
+      "split": "test",
+      "framework": "direct_ddl",
+      "model": "qwen3.5-397b-a17b",
+      "category": "E5A_AGGREGATION_RATIO_WINDOW",
+      "detail": "Same entity keys & row count, but aggregated/calculated metric differs",
+      "question": "输出各银行机构定期存款年化利率高于3%的存单数量，按数量从多到少排列。",
+      "gold_sql": "SELECT i.institution_name, COUNT(*) AS high_rate_cnt FROM term_deposit td JOIN account a ON a.account_id=td.account_id JOIN institution i ON i.institution_id=a.institution_id WHERE td.annual_interest_rate>3.0 GROUP BY i.institution_name ORDER BY high_rate_cnt DESC;",
+      "predicted_sql": "SELECT i.institution_name, COUNT(td.account_id) AS deposit_count\nFROM institution i\nJOIN account a ON i.institution_id = a.institution_id\nJOIN term_deposit td ON a.account_id = td.account_id\nWHERE td.annual_interest_rate > 0.03\nGROUP BY i.institution_id, i.institution_name\nORDER BY deposit_count DESC;",
+      "case_title": "E5-A: Ratio Formula & Chasm-Trap Fan-out"
+    }
+  ]
+}

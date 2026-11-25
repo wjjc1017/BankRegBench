@@ -1,0 +1,3 @@
+original_column_name,column_name,column_description,data_format,value_description
+payment_type,payment_type,"支付交易类型受控词表（payment_type 交易类型代码, name_zh 中文名称 转账/现金存入/现金支取/贷款发放/贷款还款/卡消费/内部转账）中的字段 payment_type",TEXT,"示例值: CARD_PURCHASE, CASH_DEPOSIT, CASH_WITHDRAWAL, INTERNAL_TRANSFER, LOAN_DISBURSEMENT, LOAN_REPAYMENT"
+name_zh,name_zh,"支付交易类型受控词表（payment_type 交易类型代码, name_zh 中文名称 转账/现金存入/现金支取/贷款发放/贷款还款/卡消费/内部转账）中的字段 name_zh",TEXT,"示例值: 转账, 现金存入, 现金支取, 贷款发放, 贷款还款, 卡消费"

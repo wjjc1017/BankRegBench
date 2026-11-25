@@ -1,0 +1,5 @@
+original_column_name,column_name,column_description,data_format,value_description
+product_code,product_code,"贷款品种受控词表（product_code 品种代码, product_name_zh 品种中文名称, product_family 产品族, is_revolving 是否循环贷）中的字段 product_code",TEXT,"示例值: EXPORT_REFINANCE, FIXED_ASSET, GREEN_CREDIT, HOUSEHOLD_MORTGAGE, MERGER_ACQ, MICRO_LOAN"
+product_name_zh,product_name_zh,"贷款品种受控词表（product_code 品种代码, product_name_zh 品种中文名称, product_family 产品族, is_revolving 是否循环贷）中的字段 product_name_zh",TEXT,"示例值: 流动资金贷款, 流动资金循环贷款, 固定资产贷款, 项目融资, 银团贷款, 并购贷款"
+product_family,product_family,"贷款品种受控词表（product_code 品种代码, product_name_zh 品种中文名称, product_family 产品族, is_revolving 是否循环贷）中的字段 product_family",TEXT,"示例值: WORKING_CAPITAL, PROJECT, CORPORATE, RETAIL, SME, GREEN"
+is_working_capital,is_working_capital,"贷款品种受控词表（product_code 品种代码, product_name_zh 品种中文名称, product_family 产品族, is_revolving 是否循环贷）中的字段 is_working_capital",INTEGER,"示例值: 1, 0"

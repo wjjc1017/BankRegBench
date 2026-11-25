@@ -1,0 +1,8969 @@
+{
+ "db_id": "bankreg_main",
+ "tables": {
+  "account": {
+   "columns": [
+    {
+     "name": "account_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "org_unit_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "account_kind",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "account_subtype",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "opened_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "closed_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "last_activity_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "is_external",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 3120
+  },
+  "account_balance_snapshot": {
+   "columns": [
+    {
+     "name": "account_balance_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "account_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "ledger_balance",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "available_balance",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "debit_balance",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "credit_balance",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    }
+   ],
+   "row_count": 2524
+  },
+  "account_holder": {
+   "columns": [
+    {
+     "name": "account_holder_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "account_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "holder_role",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    }
+   ],
+   "row_count": 3755
+  },
+  "ai_system_record_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "asset_resolution_event": {
+   "columns": [
+    {
+     "name": "resolution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "counterparty_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "counterparty_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "beneficial_owner_record_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "capital_snapshot": {
+   "columns": [
+    {
+     "name": "capital_snapshot_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "net_capital",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "tier1_capital",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "total_capital",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "risk_weighted_assets",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 6,
+   "values": [
+    [
+     "CAP-INST-001",
+     "INST-001",
+     "2026-06-30",
+     "CNY",
+     82000000000.0,
+     65600000000.0,
+     72160000000.0,
+     449402238001.44
+    ],
+    [
+     "CAP-INST-002",
+     "INST-002",
+     "2026-06-30",
+     "CNY",
+     45000000000.0,
+     36000000000.0,
+     39600000000.0,
+     377098913307.42
+    ],
+    [
+     "CAP-INST-003",
+     "INST-003",
+     "2026-06-30",
+     "CNY",
+     12000000000.0,
+     9600000000.0,
+     10560000000.0,
+     106067798973.68
+    ],
+    [
+     "CAP-INST-004",
+     "INST-004",
+     "2026-06-30",
+     "CNY",
+     28000000000.0,
+     22400000000.0,
+     24640000000.0,
+     243328554584.03
+    ],
+    [
+     "CAP-INST-005",
+     "INST-005",
+     "2026-06-30",
+     "CNY",
+     800000000.0,
+     640000000.0,
+     704000000.0,
+     6690130945.21
+    ],
+    [
+     "CAP-INST-006",
+     "INST-006",
+     "2026-06-30",
+     "CNY",
+     6000000000.0,
+     4800000000.0,
+     5280000000.0,
+     68181818181.82
+    ]
+   ]
+  },
+  "card_type_catalog": {
+   "columns": [
+    {
+     "name": "card_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 3,
+   "values": [
+    [
+     "CREDIT",
+     "贷记卡"
+    ],
+    [
+     "DEBIT",
+     "借记卡"
+    ],
+    [
+     "SEMI_CREDIT",
+     "准贷记卡"
+    ]
+   ]
+  },
+  "classification_grade": {
+   "columns": [
+    {
+     "name": "grade_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "grade_name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "grade_name_en",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "grade_ordinal",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "is_nonperforming",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 5,
+   "values": [
+    [
+     "NORMAL",
+     "正常",
+     "Normal",
+     1,
+     0
+    ],
+    [
+     "SPECIAL_MENTION",
+     "关注",
+     "Special mention",
+     2,
+     0
+    ],
+    [
+     "SUBSTANDARD",
+     "次级",
+     "Substandard",
+     3,
+     1
+    ],
+    [
+     "DOUBTFUL",
+     "可疑",
+     "Doubtful",
+     4,
+     1
+    ],
+    [
+     "LOSS",
+     "损失",
+     "Loss",
+     5,
+     1
+    ]
+   ]
+  },
+  "collateral_asset": {
+   "columns": [
+    {
+     "name": "collateral_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "owner_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "collateral_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "asset_label",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "owner_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    }
+   ],
+   "row_count": 700
+  },
+  "collateral_link": {
+   "columns": [
+    {
+     "name": "collateral_link_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "security_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "collateral_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "pledged_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "pledge_ratio",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "lien_priority",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "collateral_id",
+     "ref_table": "collateral_asset",
+     "ref_column": "collateral_id"
+    },
+    {
+     "column": "security_id",
+     "ref_table": "security_agreement",
+     "ref_column": "security_id"
+    }
+   ],
+   "row_count": 507
+  },
+  "collateral_valuation": {
+   "columns": [
+    {
+     "name": "valuation_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "collateral_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "valued_on",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "valuation_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "valuation_type",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "appraiser_kind",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "valid_until",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "collateral_id",
+     "ref_table": "collateral_asset",
+     "ref_column": "collateral_id"
+    }
+   ],
+   "row_count": 1086
+  },
+  "credit_agreement": {
+   "columns": [
+    {
+     "name": "agreement_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "facility_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "borrower_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "managing_org_unit_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "product_family",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "purpose_text",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "target_industry_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "contract_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "signed_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "maturity_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "interest_basis",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "annual_interest_rate",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "rate_spread",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "payment_mode",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "security_type",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "business_context_token",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "target_industry_code",
+     "ref_table": "industry_sector",
+     "ref_column": "sector_code"
+    },
+    {
+     "column": "managing_org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    },
+    {
+     "column": "borrower_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    },
+    {
+     "column": "facility_id",
+     "ref_table": "credit_facility",
+     "ref_column": "facility_id"
+    }
+   ],
+   "row_count": 1218
+  },
+  "credit_facility": {
+   "columns": [
+    {
+     "name": "facility_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "obligor_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "facility_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "limit_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "approved_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "obligor_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 480
+  },
+  "credit_participant": {
+   "columns": [
+    {
+     "name": "participant_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "agreement_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "participant_role",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "commitment_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "participation_ratio",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "agreement_id",
+     "ref_table": "credit_agreement",
+     "ref_column": "agreement_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "custody_operation_event_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "customer_due_diligence_event_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "data_security_event_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "delinquency_snapshot": {
+   "columns": [
+    {
+     "name": "delinquency_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "principal_overdue_days",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "interest_overdue_days",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "overdue_principal",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "overdue_interest",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    }
+   ],
+   "row_count": 661
+  },
+  "deposit_protection_record_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "exposure_group": {
+   "columns": [
+    {
+     "name": "exposure_group_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "group_name",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "group_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 120,
+   "values": [
+    [
+     "EG-0001",
+     "INST-002",
+     "集团客户群001",
+     "GROUP_CUSTOMER",
+     "2021-04-03",
+     null
+    ],
+    [
+     "EG-0002",
+     "INST-003",
+     "集团客户群002",
+     "CONNECTED_CUSTOMER",
+     "2023-02-01",
+     null
+    ],
+    [
+     "EG-0003",
+     "INST-004",
+     "集团客户群003",
+     "GROUP_CUSTOMER",
+     "2020-12-12",
+     null
+    ],
+    [
+     "EG-0004",
+     "INST-005",
+     "集团客户群004",
+     "CONNECTED_CUSTOMER",
+     "2023-06-11",
+     null
+    ],
+    [
+     "EG-0005",
+     "INST-006",
+     "集团客户群005",
+     "GROUP_CUSTOMER",
+     "2022-11-29",
+     null
+    ],
+    [
+     "EG-0006",
+     "INST-001",
+     "集团客户群006",
+     "CONNECTED_CUSTOMER",
+     "2023-01-04",
+     null
+    ],
+    [
+     "EG-0007",
+     "INST-002",
+     "集团客户群007",
+     "GROUP_CUSTOMER",
+     "2022-06-13",
+     null
+    ],
+    [
+     "EG-0008",
+     "INST-003",
+     "集团客户群008",
+     "CONNECTED_CUSTOMER",
+     "2020-06-08",
+     null
+    ],
+    [
+     "EG-0009",
+     "INST-004",
+     "集团客户群009",
+     "GROUP_CUSTOMER",
+     "2021-12-05",
+     null
+    ],
+    [
+     "EG-0010",
+     "INST-005",
+     "集团客户群010",
+     "CONNECTED_CUSTOMER",
+     "2020-08-16",
+     null
+    ],
+    [
+     "EG-0011",
+     "INST-006",
+     "集团客户群011",
+     "GROUP_CUSTOMER",
+     "2022-01-01",
+     null
+    ],
+    [
+     "EG-0012",
+     "INST-001",
+     "集团客户群012",
+     "CONNECTED_CUSTOMER",
+     "2021-11-04",
+     null
+    ],
+    [
+     "EG-0013",
+     "INST-002",
+     "集团客户群013",
+     "GROUP_CUSTOMER",
+     "2024-10-29",
+     null
+    ],
+    [
+     "EG-0014",
+     "INST-003",
+     "集团客户群014",
+     "CONNECTED_CUSTOMER",
+     "2025-03-27",
+     null
+    ],
+    [
+     "EG-0015",
+     "INST-004",
+     "集团客户群015",
+     "GROUP_CUSTOMER",
+     "2023-04-06",
+     null
+    ],
+    [
+     "EG-0016",
+     "INST-005",
+     "集团客户群016",
+     "CONNECTED_CUSTOMER",
+     "2021-08-31",
+     null
+    ],
+    [
+     "EG-0017",
+     "INST-006",
+     "集团客户群017",
+     "GROUP_CUSTOMER",
+     "2023-07-27",
+     null
+    ],
+    [
+     "EG-0018",
+     "INST-001",
+     "集团客户群018",
+     "CONNECTED_CUSTOMER",
+     "2021-11-09",
+     null
+    ],
+    [
+     "EG-0019",
+     "INST-002",
+     "集团客户群019",
+     "GROUP_CUSTOMER",
+     "2024-12-24",
+     null
+    ],
+    [
+     "EG-0020",
+     "INST-003",
+     "集团客户群020",
+     "CONNECTED_CUSTOMER",
+     "2023-06-03",
+     null
+    ],
+    [
+     "EG-0021",
+     "INST-004",
+     "集团客户群021",
+     "GROUP_CUSTOMER",
+     "2024-03-26",
+     null
+    ],
+    [
+     "EG-0022",
+     "INST-005",
+     "集团客户群022",
+     "CONNECTED_CUSTOMER",
+     "2022-06-10",
+     null
+    ],
+    [
+     "EG-0023",
+     "INST-006",
+     "集团客户群023",
+     "GROUP_CUSTOMER",
+     "2020-04-17",
+     null
+    ],
+    [
+     "EG-0024",
+     "INST-001",
+     "集团客户群024",
+     "CONNECTED_CUSTOMER",
+     "2021-06-05",
+     null
+    ],
+    [
+     "EG-0025",
+     "INST-002",
+     "集团客户群025",
+     "GROUP_CUSTOMER",
+     "2023-12-29",
+     null
+    ],
+    [
+     "EG-0026",
+     "INST-003",
+     "集团客户群026",
+     "CONNECTED_CUSTOMER",
+     "2020-02-11",
+     null
+    ],
+    [
+     "EG-0027",
+     "INST-004",
+     "集团客户群027",
+     "GROUP_CUSTOMER",
+     "2020-09-13",
+     null
+    ],
+    [
+     "EG-0028",
+     "INST-005",
+     "集团客户群028",
+     "CONNECTED_CUSTOMER",
+     "2024-08-13",
+     null
+    ],
+    [
+     "EG-0029",
+     "INST-006",
+     "集团客户群029",
+     "GROUP_CUSTOMER",
+     "2023-10-01",
+     null
+    ],
+    [
+     "EG-0030",
+     "INST-001",
+     "集团客户群030",
+     "CONNECTED_CUSTOMER",
+     "2025-04-05",
+     null
+    ],
+    [
+     "EG-0031",
+     "INST-002",
+     "集团客户群031",
+     "GROUP_CUSTOMER",
+     "2022-02-22",
+     null
+    ],
+    [
+     "EG-0032",
+     "INST-003",
+     "集团客户群032",
+     "CONNECTED_CUSTOMER",
+     "2023-11-03",
+     null
+    ],
+    [
+     "EG-0033",
+     "INST-004",
+     "集团客户群033",
+     "GROUP_CUSTOMER",
+     "2022-01-01",
+     null
+    ],
+    [
+     "EG-0034",
+     "INST-005",
+     "集团客户群034",
+     "CONNECTED_CUSTOMER",
+     "2020-08-16",
+     null
+    ],
+    [
+     "EG-0035",
+     "INST-006",
+     "集团客户群035",
+     "GROUP_CUSTOMER",
+     "2023-11-11",
+     null
+    ],
+    [
+     "EG-0036",
+     "INST-001",
+     "集团客户群036",
+     "CONNECTED_CUSTOMER",
+     "2024-03-09",
+     null
+    ],
+    [
+     "EG-0037",
+     "INST-002",
+     "集团客户群037",
+     "GROUP_CUSTOMER",
+     "2024-03-01",
+     null
+    ],
+    [
+     "EG-0038",
+     "INST-003",
+     "集团客户群038",
+     "CONNECTED_CUSTOMER",
+     "2022-10-27",
+     null
+    ],
+    [
+     "EG-0039",
+     "INST-004",
+     "集团客户群039",
+     "GROUP_CUSTOMER",
+     "2022-12-27",
+     null
+    ],
+    [
+     "EG-0040",
+     "INST-005",
+     "集团客户群040",
+     "CONNECTED_CUSTOMER",
+     "2022-04-28",
+     null
+    ],
+    [
+     "EG-0041",
+     "INST-006",
+     "集团客户群041",
+     "GROUP_CUSTOMER",
+     "2024-04-17",
+     null
+    ],
+    [
+     "EG-0042",
+     "INST-001",
+     "集团客户群042",
+     "CONNECTED_CUSTOMER",
+     "2022-03-27",
+     null
+    ],
+    [
+     "EG-0043",
+     "INST-002",
+     "集团客户群043",
+     "GROUP_CUSTOMER",
+     "2024-07-13",
+     null
+    ],
+    [
+     "EG-0044",
+     "INST-003",
+     "集团客户群044",
+     "CONNECTED_CUSTOMER",
+     "2025-04-24",
+     null
+    ],
+    [
+     "EG-0045",
+     "INST-004",
+     "集团客户群045",
+     "GROUP_CUSTOMER",
+     "2025-07-11",
+     null
+    ],
+    [
+     "EG-0046",
+     "INST-005",
+     "集团客户群046",
+     "CONNECTED_CUSTOMER",
+     "2021-02-21",
+     null
+    ],
+    [
+     "EG-0047",
+     "INST-006",
+     "集团客户群047",
+     "GROUP_CUSTOMER",
+     "2022-02-15",
+     null
+    ],
+    [
+     "EG-0048",
+     "INST-001",
+     "集团客户群048",
+     "CONNECTED_CUSTOMER",
+     "2020-02-20",
+     null
+    ],
+    [
+     "EG-0049",
+     "INST-002",
+     "集团客户群049",
+     "GROUP_CUSTOMER",
+     "2020-08-16",
+     null
+    ],
+    [
+     "EG-0050",
+     "INST-003",
+     "集团客户群050",
+     "CONNECTED_CUSTOMER",
+     "2025-12-08",
+     null
+    ],
+    [
+     "EG-0051",
+     "INST-004",
+     "集团客户群051",
+     "GROUP_CUSTOMER",
+     "2023-05-28",
+     null
+    ],
+    [
+     "EG-0052",
+     "INST-005",
+     "集团客户群052",
+     "CONNECTED_CUSTOMER",
+     "2021-03-20",
+     null
+    ],
+    [
+     "EG-0053",
+     "INST-006",
+     "集团客户群053",
+     "GROUP_CUSTOMER",
+     "2021-03-12",
+     null
+    ],
+    [
+     "EG-0054",
+     "INST-001",
+     "集团客户群054",
+     "CONNECTED_CUSTOMER",
+     "2023-06-14",
+     null
+    ],
+    [
+     "EG-0055",
+     "INST-002",
+     "集团客户群055",
+     "GROUP_CUSTOMER",
+     "2021-11-19",
+     null
+    ],
+    [
+     "EG-0056",
+     "INST-003",
+     "集团客户群056",
+     "CONNECTED_CUSTOMER",
+     "2025-07-16",
+     null
+    ],
+    [
+     "EG-0057",
+     "INST-004",
+     "集团客户群057",
+     "GROUP_CUSTOMER",
+     "2020-04-29",
+     null
+    ],
+    [
+     "EG-0058",
+     "INST-005",
+     "集团客户群058",
+     "CONNECTED_CUSTOMER",
+     "2025-05-16",
+     null
+    ],
+    [
+     "EG-0059",
+     "INST-006",
+     "集团客户群059",
+     "GROUP_CUSTOMER",
+     "2025-06-24",
+     null
+    ],
+    [
+     "EG-0060",
+     "INST-001",
+     "集团客户群060",
+     "CONNECTED_CUSTOMER",
+     "2021-06-03",
+     null
+    ],
+    [
+     "EG-0061",
+     "INST-002",
+     "集团客户群061",
+     "GROUP_CUSTOMER",
+     "2025-09-11",
+     null
+    ],
+    [
+     "EG-0062",
+     "INST-003",
+     "集团客户群062",
+     "CONNECTED_CUSTOMER",
+     "2021-01-25",
+     null
+    ],
+    [
+     "EG-0063",
+     "INST-004",
+     "集团客户群063",
+     "GROUP_CUSTOMER",
+     "2024-11-09",
+     null
+    ],
+    [
+     "EG-0064",
+     "INST-005",
+     "集团客户群064",
+     "CONNECTED_CUSTOMER",
+     "2021-01-19",
+     null
+    ],
+    [
+     "EG-0065",
+     "INST-006",
+     "集团客户群065",
+     "GROUP_CUSTOMER",
+     "2022-11-28",
+     null
+    ],
+    [
+     "EG-0066",
+     "INST-001",
+     "集团客户群066",
+     "CONNECTED_CUSTOMER",
+     "2022-05-28",
+     null
+    ],
+    [
+     "EG-0067",
+     "INST-002",
+     "集团客户群067",
+     "GROUP_CUSTOMER",
+     "2020-08-31",
+     null
+    ],
+    [
+     "EG-0068",
+     "INST-003",
+     "集团客户群068",
+     "CONNECTED_CUSTOMER",
+     "2022-08-28",
+     null
+    ],
+    [
+     "EG-0069",
+     "INST-004",
+     "集团客户群069",
+     "GROUP_CUSTOMER",
+     "2023-09-14",
+     null
+    ],
+    [
+     "EG-0070",
+     "INST-005",
+     "集团客户群070",
+     "CONNECTED_CUSTOMER",
+     "2021-02-08",
+     null
+    ],
+    [
+     "EG-0071",
+     "INST-006",
+     "集团客户群071",
+     "GROUP_CUSTOMER",
+     "2025-10-31",
+     null
+    ],
+    [
+     "EG-0072",
+     "INST-001",
+     "集团客户群072",
+     "CONNECTED_CUSTOMER",
+     "2024-01-11",
+     null
+    ],
+    [
+     "EG-0073",
+     "INST-002",
+     "集团客户群073",
+     "GROUP_CUSTOMER",
+     "2022-10-16",
+     null
+    ],
+    [
+     "EG-0074",
+     "INST-003",
+     "集团客户群074",
+     "CONNECTED_CUSTOMER",
+     "2023-09-29",
+     null
+    ],
+    [
+     "EG-0075",
+     "INST-004",
+     "集团客户群075",
+     "GROUP_CUSTOMER",
+     "2024-01-18",
+     null
+    ],
+    [
+     "EG-0076",
+     "INST-005",
+     "集团客户群076",
+     "CONNECTED_CUSTOMER",
+     "2022-08-26",
+     null
+    ],
+    [
+     "EG-0077",
+     "INST-006",
+     "集团客户群077",
+     "GROUP_CUSTOMER",
+     "2024-12-27",
+     null
+    ],
+    [
+     "EG-0078",
+     "INST-001",
+     "集团客户群078",
+     "CONNECTED_CUSTOMER",
+     "2022-08-31",
+     null
+    ],
+    [
+     "EG-0079",
+     "INST-002",
+     "集团客户群079",
+     "GROUP_CUSTOMER",
+     "2024-05-18",
+     null
+    ],
+    [
+     "EG-0080",
+     "INST-003",
+     "集团客户群080",
+     "CONNECTED_CUSTOMER",
+     "2021-01-31",
+     null
+    ],
+    [
+     "EG-0081",
+     "INST-004",
+     "集团客户群081",
+     "GROUP_CUSTOMER",
+     "2021-09-16",
+     null
+    ],
+    [
+     "EG-0082",
+     "INST-005",
+     "集团客户群082",
+     "CONNECTED_CUSTOMER",
+     "2023-10-03",
+     null
+    ],
+    [
+     "EG-0083",
+     "INST-006",
+     "集团客户群083",
+     "GROUP_CUSTOMER",
+     "2023-02-06",
+     null
+    ],
+    [
+     "EG-0084",
+     "INST-001",
+     "集团客户群084",
+     "CONNECTED_CUSTOMER",
+     "2023-11-28",
+     null
+    ],
+    [
+     "EG-0085",
+     "INST-002",
+     "集团客户群085",
+     "GROUP_CUSTOMER",
+     "2025-10-13",
+     null
+    ],
+    [
+     "EG-0086",
+     "INST-003",
+     "集团客户群086",
+     "CONNECTED_CUSTOMER",
+     "2025-07-11",
+     null
+    ],
+    [
+     "EG-0087",
+     "INST-004",
+     "集团客户群087",
+     "GROUP_CUSTOMER",
+     "2023-10-02",
+     null
+    ],
+    [
+     "EG-0088",
+     "INST-005",
+     "集团客户群088",
+     "CONNECTED_CUSTOMER",
+     "2020-10-20",
+     null
+    ],
+    [
+     "EG-0089",
+     "INST-006",
+     "集团客户群089",
+     "GROUP_CUSTOMER",
+     "2022-02-28",
+     null
+    ],
+    [
+     "EG-0090",
+     "INST-001",
+     "集团客户群090",
+     "CONNECTED_CUSTOMER",
+     "2020-07-02",
+     null
+    ],
+    [
+     "EG-0091",
+     "INST-002",
+     "集团客户群091",
+     "GROUP_CUSTOMER",
+     "2020-03-15",
+     null
+    ],
+    [
+     "EG-0092",
+     "INST-003",
+     "集团客户群092",
+     "CONNECTED_CUSTOMER",
+     "2022-08-22",
+     null
+    ],
+    [
+     "EG-0093",
+     "INST-004",
+     "集团客户群093",
+     "GROUP_CUSTOMER",
+     "2020-09-02",
+     null
+    ],
+    [
+     "EG-0094",
+     "INST-005",
+     "集团客户群094",
+     "CONNECTED_CUSTOMER",
+     "2020-08-25",
+     null
+    ],
+    [
+     "EG-0095",
+     "INST-006",
+     "集团客户群095",
+     "GROUP_CUSTOMER",
+     "2023-11-10",
+     null
+    ],
+    [
+     "EG-0096",
+     "INST-001",
+     "集团客户群096",
+     "CONNECTED_CUSTOMER",
+     "2025-03-12",
+     null
+    ],
+    [
+     "EG-0097",
+     "INST-002",
+     "集团客户群097",
+     "GROUP_CUSTOMER",
+     "2024-08-08",
+     null
+    ],
+    [
+     "EG-0098",
+     "INST-003",
+     "集团客户群098",
+     "CONNECTED_CUSTOMER",
+     "2024-03-12",
+     null
+    ],
+    [
+     "EG-0099",
+     "INST-004",
+     "集团客户群099",
+     "GROUP_CUSTOMER",
+     "2025-03-08",
+     null
+    ],
+    [
+     "EG-0100",
+     "INST-005",
+     "集团客户群100",
+     "CONNECTED_CUSTOMER",
+     "2023-07-28",
+     null
+    ],
+    [
+     "EG-0101",
+     "INST-006",
+     "集团客户群101",
+     "GROUP_CUSTOMER",
+     "2020-02-27",
+     null
+    ],
+    [
+     "EG-0102",
+     "INST-001",
+     "集团客户群102",
+     "CONNECTED_CUSTOMER",
+     "2021-04-10",
+     null
+    ],
+    [
+     "EG-0103",
+     "INST-002",
+     "集团客户群103",
+     "GROUP_CUSTOMER",
+     "2021-08-03",
+     null
+    ],
+    [
+     "EG-0104",
+     "INST-003",
+     "集团客户群104",
+     "CONNECTED_CUSTOMER",
+     "2020-03-24",
+     null
+    ],
+    [
+     "EG-0105",
+     "INST-004",
+     "集团客户群105",
+     "GROUP_CUSTOMER",
+     "2021-03-19",
+     null
+    ],
+    [
+     "EG-0106",
+     "INST-005",
+     "集团客户群106",
+     "CONNECTED_CUSTOMER",
+     "2023-11-05",
+     null
+    ],
+    [
+     "EG-0107",
+     "INST-006",
+     "集团客户群107",
+     "GROUP_CUSTOMER",
+     "2024-05-09",
+     null
+    ],
+    [
+     "EG-0108",
+     "INST-001",
+     "集团客户群108",
+     "CONNECTED_CUSTOMER",
+     "2022-04-08",
+     null
+    ],
+    [
+     "EG-0109",
+     "INST-002",
+     "集团客户群109",
+     "GROUP_CUSTOMER",
+     "2025-03-25",
+     null
+    ],
+    [
+     "EG-0110",
+     "INST-003",
+     "集团客户群110",
+     "CONNECTED_CUSTOMER",
+     "2024-01-23",
+     null
+    ],
+    [
+     "EG-0111",
+     "INST-004",
+     "集团客户群111",
+     "GROUP_CUSTOMER",
+     "2022-12-17",
+     null
+    ],
+    [
+     "EG-0112",
+     "INST-005",
+     "集团客户群112",
+     "CONNECTED_CUSTOMER",
+     "2021-04-19",
+     null
+    ],
+    [
+     "EG-0113",
+     "INST-006",
+     "集团客户群113",
+     "GROUP_CUSTOMER",
+     "2020-01-09",
+     null
+    ],
+    [
+     "EG-0114",
+     "INST-001",
+     "集团客户群114",
+     "CONNECTED_CUSTOMER",
+     "2020-05-18",
+     null
+    ],
+    [
+     "EG-0115",
+     "INST-002",
+     "集团客户群115",
+     "GROUP_CUSTOMER",
+     "2025-09-20",
+     null
+    ],
+    [
+     "EG-0116",
+     "INST-003",
+     "集团客户群116",
+     "CONNECTED_CUSTOMER",
+     "2020-08-31",
+     null
+    ],
+    [
+     "EG-0117",
+     "INST-004",
+     "集团客户群117",
+     "GROUP_CUSTOMER",
+     "2021-07-05",
+     null
+    ],
+    [
+     "EG-0118",
+     "INST-005",
+     "集团客户群118",
+     "CONNECTED_CUSTOMER",
+     "2024-07-08",
+     null
+    ],
+    [
+     "EG-0119",
+     "INST-006",
+     "集团客户群119",
+     "GROUP_CUSTOMER",
+     "2022-07-06",
+     null
+    ],
+    [
+     "EG-0120",
+     "INST-001",
+     "集团客户群120",
+     "CONNECTED_CUSTOMER",
+     "2021-01-19",
+     null
+    ]
+   ]
+  },
+  "exposure_group_member": {
+   "columns": [
+    {
+     "name": "exposure_member_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "exposure_group_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "exposure_group_id",
+     "ref_table": "exposure_group",
+     "ref_column": "exposure_group_id"
+    }
+   ],
+   "row_count": 521
+  },
+  "exposure_group_type_catalog": {
+   "columns": [
+    {
+     "name": "group_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 2,
+   "values": [
+    [
+     "GROUP_CUSTOMER",
+     "集团客户"
+    ],
+    [
+     "CONNECTED_CUSTOMER",
+     "关联客户群"
+    ]
+   ]
+  },
+  "financial_instrument": {
+   "columns": [
+    {
+     "name": "instrument_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "instrument_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "issuer_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "applicant_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "beneficiary_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "issue_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "margin_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "face_value",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "margin_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "issued_on",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "maturity_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "trade_background_token",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "margin_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    },
+    {
+     "column": "issue_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    },
+    {
+     "column": "beneficiary_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "applicant_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "issuer_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "financial_snapshot": {
+   "columns": [
+    {
+     "name": "financial_snapshot_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "total_assets",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "total_liabilities",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "net_assets",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "annual_revenue",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "source_kind",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    }
+   ],
+   "row_count": 6,
+   "values": [
+    [
+     "FIN-INST-001",
+     "PTY-INST-001",
+     "2026-06-30",
+     "CNY",
+     987370174089.85,
+     54955899364.78,
+     5492862188.33,
+     6382564004.51,
+     "REGULATORY_REPORT"
+    ],
+    [
+     "FIN-INST-002",
+     "PTY-INST-002",
+     "2026-06-30",
+     "CNY",
+     556484020990.71,
+     31108832653.78,
+     2288701670.28,
+     5533559688.04,
+     "REGULATORY_REPORT"
+    ],
+    [
+     "FIN-INST-003",
+     "PTY-INST-003",
+     "2026-06-30",
+     "CNY",
+     104288861625.66,
+     9042085282.47,
+     714892616.93,
+     933836971.85,
+     "REGULATORY_REPORT"
+    ],
+    [
+     "FIN-INST-004",
+     "PTY-INST-004",
+     "2026-06-30",
+     "CNY",
+     265745167146.24,
+     18239877241.14,
+     1530199966.16,
+     1639450060.51,
+     "REGULATORY_REPORT"
+    ],
+    [
+     "FIN-INST-005",
+     "PTY-INST-005",
+     "2026-06-30",
+     "CNY",
+     7382493786.23,
+     651588695.22,
+     44464573.92,
+     74697363.45,
+     "REGULATORY_REPORT"
+    ],
+    [
+     "FIN-INST-006",
+     "PTY-INST-006",
+     "2026-06-30",
+     "CNY",
+     54096628266.66,
+     4163547022.56,
+     677124051.91,
+     774197627.6,
+     "REGULATORY_REPORT"
+    ]
+   ]
+  },
+  "fx_business_event_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "fx_rate": {
+   "columns": [
+    {
+     "name": "fx_rate_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "rate_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "base_currency",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "quote_currency",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "rate_value",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "rate_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_kind",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 0
+  },
+  "gl_account": {
+   "columns": [
+    {
+     "name": "gl_account_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "parent_gl_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "account_label",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "account_category",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "balance_side",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "parent_gl_account_id",
+     "ref_table": "gl_account",
+     "ref_column": "gl_account_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "gl_balance_snapshot": {
+   "columns": [
+    {
+     "name": "gl_balance_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "gl_account_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "org_unit_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "period_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "debit_balance",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "credit_balance",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    },
+    {
+     "column": "gl_account_id",
+     "ref_table": "gl_account",
+     "ref_column": "gl_account_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "governance_control_record_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "group_membership": {
+   "columns": [
+    {
+     "name": "membership_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "group_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "member_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "membership_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "member_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "group_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "guarantor_commitment": {
+   "columns": [
+    {
+     "name": "commitment_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "security_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "guarantor_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "guaranteed_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "guarantor_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "security_id",
+     "ref_table": "security_agreement",
+     "ref_column": "security_id"
+    }
+   ],
+   "row_count": 407
+  },
+  "industry_sector": {
+   "columns": [
+    {
+     "name": "sector_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "sector_name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "sector_name_en",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "parent_sector_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "risk_category",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "parent_sector_code",
+     "ref_table": "industry_sector",
+     "ref_column": "sector_code"
+    }
+   ],
+   "row_count": 20,
+   "values": [
+    [
+     "REAL_ESTATE",
+     "房地产业",
+     "Real estate",
+     null,
+     "RESTRICTED"
+    ],
+    [
+     "SECURITIES",
+     "证券期货业",
+     "Securities and futures",
+     null,
+     "RESTRICTED"
+    ],
+    [
+     "LOCAL_GOV_FIN",
+     "地方政府融资平台",
+     "Local government financing vehicle",
+     null,
+     "RESTRICTED"
+    ],
+    [
+     "MANUFACTURING",
+     "制造业",
+     "Manufacturing",
+     null,
+     "NORMAL"
+    ],
+    [
+     "WHOLESALE_RETAIL",
+     "批发和零售业",
+     "Wholesale and retail",
+     null,
+     "NORMAL"
+    ],
+    [
+     "CONSTRUCTION",
+     "建筑业",
+     "Construction",
+     null,
+     "NORMAL"
+    ],
+    [
+     "TRANSPORT",
+     "交通运输业",
+     "Transport",
+     null,
+     "NORMAL"
+    ],
+    [
+     "AGRICULTURE",
+     "农林牧渔业",
+     "Agriculture",
+     null,
+     "NORMAL"
+    ],
+    [
+     "MINING",
+     "采矿业",
+     "Mining",
+     null,
+     "NORMAL"
+    ],
+    [
+     "UTILITIES",
+     "电力热力燃气及水生产供应业",
+     "Utilities",
+     null,
+     "NORMAL"
+    ],
+    [
+     "INFO_TECH",
+     "信息传输软件和信息技术服务业",
+     "IT services",
+     null,
+     "NORMAL"
+    ],
+    [
+     "HEALTHCARE",
+     "卫生和社会工作",
+     "Healthcare",
+     null,
+     "NORMAL"
+    ],
+    [
+     "EDUCATION",
+     "教育",
+     "Education",
+     null,
+     "NORMAL"
+    ],
+    [
+     "HOSPITALITY",
+     "住宿和餐饮业",
+     "Hospitality",
+     null,
+     "NORMAL"
+    ],
+    [
+     "LEASING",
+     "租赁和商务服务业",
+     "Leasing and business services",
+     null,
+     "NORMAL"
+    ],
+    [
+     "STEEL",
+     "黑色金属冶炼和压延加工业",
+     "Steel",
+     null,
+     "EXIT"
+    ],
+    [
+     "COAL",
+     "煤炭开采和洗选业",
+     "Coal",
+     null,
+     "EXIT"
+    ],
+    [
+     "PHOTOVOLTAIC",
+     "光伏设备及元器件制造",
+     "Photovoltaics",
+     null,
+     "NORMAL"
+    ],
+    [
+     "CULTURE",
+     "文化体育和娱乐业",
+     "Culture and sports",
+     null,
+     "RESTRICTED"
+    ],
+    [
+     "OTHER",
+     "其他行业",
+     "Other",
+     null,
+     "NORMAL"
+    ]
+   ]
+  },
+  "institution": {
+   "columns": [
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_name",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "institution_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "country_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "region_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "established_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 6,
+   "values": [
+    [
+     "INST-001",
+     "华东银行股份有限公司",
+     "COMMERCIAL_BANK",
+     "CN",
+     "110000",
+     "2005-01-01",
+     "ACTIVE"
+    ],
+    [
+     "INST-002",
+     "华南银行股份有限公司",
+     "COMMERCIAL_BANK",
+     "CN",
+     "310000",
+     "2006-01-01",
+     "ACTIVE"
+    ],
+    [
+     "INST-003",
+     "北方农村商业银行",
+     "RURAL_COMMERCIAL_BANK",
+     "CN",
+     "440300",
+     "2007-01-01",
+     "ACTIVE"
+    ],
+    [
+     "INST-004",
+     "西部城市商业银行",
+     "CITY_COMMERCIAL_BANK",
+     "CN",
+     "330100",
+     "2008-01-01",
+     "ACTIVE"
+    ],
+    [
+     "INST-005",
+     "东海村镇银行",
+     "VILLAGE_BANK",
+     "CN",
+     "510100",
+     "2009-01-01",
+     "ACTIVE"
+    ],
+    [
+     "INST-006",
+     "中原民营银行",
+     "PRIVATE_BANK",
+     "CN",
+     "110000",
+     "2010-01-01",
+     "ACTIVE"
+    ]
+   ]
+  },
+  "instrument_type_catalog": {
+   "columns": [
+    {
+     "name": "instrument_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 3,
+   "values": [
+    [
+     "BANK_ACCEPTANCE_DRAFT",
+     "银行承兑汇票"
+    ],
+    [
+     "COMMERCIAL_ACCEPTANCE_DRAFT",
+     "商业承兑汇票"
+    ],
+    [
+     "LETTER_OF_CREDIT",
+     "信用证"
+    ]
+   ]
+  },
+  "investor_product_position": {
+   "columns": [
+    {
+     "name": "investor_position_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "product_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "investor_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "units",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "position_balance",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "converted_balance",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "cost_basis",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "investor_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "product_id",
+     "ref_table": "wealth_product",
+     "ref_column": "product_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "lending_control_event_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "license_record_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "liquidity_bucket_snapshot": {
+   "columns": [
+    {
+     "name": "liquidity_bucket_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "bucket_start_days",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "bucket_end_days",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "cash_inflow",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "cash_outflow",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "liquid_assets",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "stable_funding",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "loan_balance_snapshot": {
+   "columns": [
+    {
+     "name": "loan_balance_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "principal_balance",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "overdue_principal",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "on_balance_interest_arrears",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "off_balance_interest_arrears",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "overdue_since",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    }
+   ],
+   "row_count": 2400
+  },
+  "loan_cashflow": {
+   "columns": [
+    {
+     "name": "loan_cashflow_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "payment_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "cashflow_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "business_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "principal_balance_after",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "payment_id",
+     "ref_table": "payment_event",
+     "ref_column": "payment_id"
+    },
+    {
+     "column": "loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "loan_drawdown": {
+   "columns": [
+    {
+     "name": "loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "agreement_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "loan_account_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "disbursement_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "repayment_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "disbursed_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "disbursed_on",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "original_maturity_on",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "current_maturity_on",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "closed_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "drawdown_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "payment_mode",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "repayment_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    },
+    {
+     "column": "disbursement_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    },
+    {
+     "column": "loan_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    },
+    {
+     "column": "agreement_id",
+     "ref_table": "credit_agreement",
+     "ref_column": "agreement_id"
+    }
+   ],
+   "row_count": 2400
+  },
+  "loan_lineage": {
+   "columns": [
+    {
+     "name": "lineage_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "predecessor_loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "successor_loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "relationship_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "linked_on",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "rationale",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "successor_loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    },
+    {
+     "column": "predecessor_loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "loan_product_catalog": {
+   "columns": [
+    {
+     "name": "product_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "product_name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "product_family",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "is_working_capital",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 12,
+   "values": [
+    [
+     "WC_TERM",
+     "流动资金贷款",
+     "WORKING_CAPITAL",
+     1
+    ],
+    [
+     "WC_REVOLVING",
+     "流动资金循环贷款",
+     "WORKING_CAPITAL",
+     1
+    ],
+    [
+     "FIXED_ASSET",
+     "固定资产贷款",
+     "PROJECT",
+     0
+    ],
+    [
+     "PROJECT_FINANCE",
+     "项目融资",
+     "PROJECT",
+     0
+    ],
+    [
+     "SYNDICATED",
+     "银团贷款",
+     "CORPORATE",
+     0
+    ],
+    [
+     "MERGER_ACQ",
+     "并购贷款",
+     "CORPORATE",
+     0
+    ],
+    [
+     "HOUSEHOLD_MORTGAGE",
+     "个人住房按揭贷款",
+     "RETAIL",
+     0
+    ],
+    [
+     "PERSONAL_BUSINESS",
+     "个人经营性贷款",
+     "RETAIL",
+     0
+    ],
+    [
+     "MICRO_LOAN",
+     "小微企业贷款",
+     "SME",
+     1
+    ],
+    [
+     "TECH_RENOVATION",
+     "技术改造贷款",
+     "SME",
+     0
+    ],
+    [
+     "GREEN_CREDIT",
+     "绿色信贷",
+     "GREEN",
+     0
+    ],
+    [
+     "EXPORT_REFINANCE",
+     "出口退税质押贷款",
+     "TRADE",
+     1
+    ]
+   ]
+  },
+  "managed_asset": {
+   "columns": [
+    {
+     "name": "asset_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "originator_institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "asset_name",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "asset_scope",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "asset_category_primary",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "asset_category_secondary",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "issuer_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "obligor_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "industry_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "country_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "market_venue",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "issued_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "interest_start_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "maturity_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "annual_yield_rate",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "internal_rating",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "external_rating",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "valuation_method",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "is_liability",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "industry_code",
+     "ref_table": "industry_sector",
+     "ref_column": "sector_code"
+    },
+    {
+     "column": "obligor_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "issuer_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "originator_institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 900
+  },
+  "market_position": {
+   "columns": [
+    {
+     "name": "position_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "instrument_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "quantity",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "carrying_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "fair_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "instrument_id",
+     "ref_table": "financial_instrument",
+     "ref_column": "instrument_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "market_trade": {
+   "columns": [
+    {
+     "name": "market_trade_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "instrument_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "counterparty_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "trade_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "business_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "trade_time",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "notional_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "settlement_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "price",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "interest_rate",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "settlement_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "settlement_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    },
+    {
+     "column": "counterparty_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "instrument_id",
+     "ref_table": "financial_instrument",
+     "ref_column": "instrument_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "operational_risk_event_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "organization_profile": {
+   "columns": [
+    {
+     "name": "party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "legal_form",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "organization_kind",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "industry_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "business_scope",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "registered_region",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "registration_expires_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "legal_representative_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "operating_status",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "legal_representative_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "industry_code",
+     "ref_table": "industry_sector",
+     "ref_column": "sector_code"
+    },
+    {
+     "column": "party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    }
+   ],
+   "row_count": 646
+  },
+  "organization_unit": {
+   "columns": [
+    {
+     "name": "org_unit_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "parent_org_unit_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "unit_name",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "unit_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "region_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "parent_org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 36,
+   "values": [
+    [
+     "INST-001-HQ",
+     "INST-001",
+     null,
+     "总行营业部",
+     "HEAD_OFFICE",
+     "110000",
+     "2015-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-001-B01",
+     "INST-001",
+     "INST-001-HQ",
+     "北京分行",
+     "BRANCH",
+     "310000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-001-B02",
+     "INST-001",
+     "INST-001-HQ",
+     "上海分行",
+     "BRANCH",
+     "440300",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-001-B03",
+     "INST-001",
+     "INST-001-HQ",
+     "深圳分行",
+     "BRANCH",
+     "330100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-001-B04",
+     "INST-001",
+     "INST-001-HQ",
+     "杭州分行",
+     "BRANCH",
+     "510100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-001-B05",
+     "INST-001",
+     "INST-001-HQ",
+     "成都分行",
+     "BRANCH",
+     "110000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-002-HQ",
+     "INST-002",
+     null,
+     "总行营业部",
+     "HEAD_OFFICE",
+     "110000",
+     "2015-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-002-B01",
+     "INST-002",
+     "INST-002-HQ",
+     "北京分行",
+     "BRANCH",
+     "310000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-002-B02",
+     "INST-002",
+     "INST-002-HQ",
+     "上海分行",
+     "BRANCH",
+     "440300",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-002-B03",
+     "INST-002",
+     "INST-002-HQ",
+     "深圳分行",
+     "BRANCH",
+     "330100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-002-B04",
+     "INST-002",
+     "INST-002-HQ",
+     "杭州分行",
+     "BRANCH",
+     "510100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-002-B05",
+     "INST-002",
+     "INST-002-HQ",
+     "成都分行",
+     "BRANCH",
+     "110000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-003-HQ",
+     "INST-003",
+     null,
+     "总行营业部",
+     "HEAD_OFFICE",
+     "110000",
+     "2015-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-003-B01",
+     "INST-003",
+     "INST-003-HQ",
+     "北京分行",
+     "BRANCH",
+     "310000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-003-B02",
+     "INST-003",
+     "INST-003-HQ",
+     "上海分行",
+     "BRANCH",
+     "440300",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-003-B03",
+     "INST-003",
+     "INST-003-HQ",
+     "深圳分行",
+     "BRANCH",
+     "330100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-003-B04",
+     "INST-003",
+     "INST-003-HQ",
+     "杭州分行",
+     "BRANCH",
+     "510100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-003-B05",
+     "INST-003",
+     "INST-003-HQ",
+     "成都分行",
+     "BRANCH",
+     "110000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-004-HQ",
+     "INST-004",
+     null,
+     "总行营业部",
+     "HEAD_OFFICE",
+     "110000",
+     "2015-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-004-B01",
+     "INST-004",
+     "INST-004-HQ",
+     "北京分行",
+     "BRANCH",
+     "310000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-004-B02",
+     "INST-004",
+     "INST-004-HQ",
+     "上海分行",
+     "BRANCH",
+     "440300",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-004-B03",
+     "INST-004",
+     "INST-004-HQ",
+     "深圳分行",
+     "BRANCH",
+     "330100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-004-B04",
+     "INST-004",
+     "INST-004-HQ",
+     "杭州分行",
+     "BRANCH",
+     "510100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-004-B05",
+     "INST-004",
+     "INST-004-HQ",
+     "成都分行",
+     "BRANCH",
+     "110000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-005-HQ",
+     "INST-005",
+     null,
+     "总行营业部",
+     "HEAD_OFFICE",
+     "110000",
+     "2015-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-005-B01",
+     "INST-005",
+     "INST-005-HQ",
+     "北京分行",
+     "BRANCH",
+     "310000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-005-B02",
+     "INST-005",
+     "INST-005-HQ",
+     "上海分行",
+     "BRANCH",
+     "440300",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-005-B03",
+     "INST-005",
+     "INST-005-HQ",
+     "深圳分行",
+     "BRANCH",
+     "330100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-005-B04",
+     "INST-005",
+     "INST-005-HQ",
+     "杭州分行",
+     "BRANCH",
+     "510100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-005-B05",
+     "INST-005",
+     "INST-005-HQ",
+     "成都分行",
+     "BRANCH",
+     "110000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-006-HQ",
+     "INST-006",
+     null,
+     "总行营业部",
+     "HEAD_OFFICE",
+     "110000",
+     "2015-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-006-B01",
+     "INST-006",
+     "INST-006-HQ",
+     "北京分行",
+     "BRANCH",
+     "310000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-006-B02",
+     "INST-006",
+     "INST-006-HQ",
+     "上海分行",
+     "BRANCH",
+     "440300",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-006-B03",
+     "INST-006",
+     "INST-006-HQ",
+     "深圳分行",
+     "BRANCH",
+     "330100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-006-B04",
+     "INST-006",
+     "INST-006-HQ",
+     "杭州分行",
+     "BRANCH",
+     "510100",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ],
+    [
+     "INST-006-B05",
+     "INST-006",
+     "INST-006-HQ",
+     "成都分行",
+     "BRANCH",
+     "110000",
+     "2016-01-01",
+     null,
+     "ACTIVE",
+     0
+    ]
+   ]
+  },
+  "ownership_interest": {
+   "columns": [
+    {
+     "name": "ownership_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "owner_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "target_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "ownership_ratio",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "voting_ratio",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "is_controller",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "target_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "owner_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "party": {
+   "columns": [
+    {
+     "name": "party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "party_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "display_name",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "customer_segment",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "home_org_unit_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "onboarded_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "home_org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    }
+   ],
+   "row_count": 1629
+  },
+  "party_relation": {
+   "columns": [
+    {
+     "name": "relation_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "source_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "target_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "relation_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "confidence_level",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "source_kind",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "target_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "source_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    }
+   ],
+   "row_count": 151
+  },
+  "party_type_catalog": {
+   "columns": [
+    {
+     "name": "party_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 3,
+   "values": [
+    [
+     "CORPORATE",
+     "对公客户"
+    ],
+    [
+     "INDIVIDUAL",
+     "个人客户"
+    ],
+    [
+     "STAFF",
+     "本行员工"
+    ]
+   ]
+  },
+  "payment_card": {
+   "columns": [
+    {
+     "name": "card_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "settlement_account_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "holder_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "card_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "issued_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "expires_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "holder_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "settlement_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    }
+   ],
+   "row_count": 900
+  },
+  "payment_event": {
+   "columns": [
+    {
+     "name": "payment_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "from_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "to_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "business_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_time",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "payment_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "channel",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "is_cash",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "memo",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "operator_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "origin_org_unit_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "balance_after",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "origin_org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    },
+    {
+     "column": "operator_id",
+     "ref_table": "service_operator",
+     "ref_column": "operator_id"
+    },
+    {
+     "column": "to_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    },
+    {
+     "column": "from_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    }
+   ],
+   "row_count": 26110
+  },
+  "payment_instruction": {
+   "columns": [
+    {
+     "name": "instruction_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "payment_mode",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "intended_payee_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "intended_payee_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "instruction_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "instruction_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "intended_payee_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    },
+    {
+     "column": "intended_payee_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    }
+   ],
+   "row_count": 2400
+  },
+  "payment_mode_catalog": {
+   "columns": [
+    {
+     "name": "payment_mode",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "payment_mode_name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 2,
+   "values": [
+    [
+     "ENTRUSTED_PAYMENT",
+     "受托支付"
+    ],
+    [
+     "SELF_PAYMENT",
+     "自主支付"
+    ]
+   ]
+  },
+  "payment_type_catalog": {
+   "columns": [
+    {
+     "name": "payment_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 7,
+   "values": [
+    [
+     "TRANSFER",
+     "转账"
+    ],
+    [
+     "CASH_DEPOSIT",
+     "现金存入"
+    ],
+    [
+     "CASH_WITHDRAWAL",
+     "现金支取"
+    ],
+    [
+     "LOAN_DISBURSEMENT",
+     "贷款发放"
+    ],
+    [
+     "LOAN_REPAYMENT",
+     "贷款还款"
+    ],
+    [
+     "CARD_PURCHASE",
+     "卡消费"
+    ],
+    [
+     "INTERNAL_TRANSFER",
+     "内部转账"
+    ]
+   ]
+  },
+  "person_profile": {
+   "columns": [
+    {
+     "name": "party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "occupation_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "employment_sector",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "employer_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "annual_income",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "is_public_official",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "employer_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    }
+   ],
+   "row_count": 983
+  },
+  "private_credit_profile": {
+   "columns": [
+    {
+     "name": "asset_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "project_name",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "project_industry_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "is_monitored_sector",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "financing_party_size",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "financing_party_economic_type",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "project_return_rate",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "interest_payment_interval_months",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "repayment_type",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "guarantee_type",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "collateral_type",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "collateral_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "option_type",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "perpetual_term_type",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "first_reset_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "reset_interval_months",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "project_industry_code",
+     "ref_table": "industry_sector",
+     "ref_column": "sector_code"
+    },
+    {
+     "column": "asset_id",
+     "ref_table": "managed_asset",
+     "ref_column": "asset_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "product_asset_trade": {
+   "columns": [
+    {
+     "name": "asset_trade_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "product_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "asset_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "counterparty_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "counterparty_product_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "trade_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "trade_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "initiated_at",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "trade_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "converted_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "quantity",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "clean_price",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "full_price",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "yield_to_maturity",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "market_venue",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "valuation_method",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "counterparty_product_id",
+     "ref_table": "wealth_product",
+     "ref_column": "product_id"
+    },
+    {
+     "column": "counterparty_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "asset_id",
+     "ref_table": "managed_asset",
+     "ref_column": "asset_id"
+    },
+    {
+     "column": "product_id",
+     "ref_table": "wealth_product",
+     "ref_column": "product_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "product_conduct_event_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "product_holding_snapshot": {
+   "columns": [
+    {
+     "name": "holding_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "product_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "asset_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "investment_path",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "lookthrough_depth",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "intermediary_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "quantity",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "carrying_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "fair_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "converted_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "clean_valuation_price",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "full_valuation_price",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "remaining_term_days",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "intermediary_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "asset_id",
+     "ref_table": "managed_asset",
+     "ref_column": "asset_id"
+    },
+    {
+     "column": "product_id",
+     "ref_table": "wealth_product",
+     "ref_column": "product_id"
+    }
+   ],
+   "row_count": 1151
+  },
+  "product_sale_event": {
+   "columns": [
+    {
+     "name": "sale_event_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "product_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "investor_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "funding_account_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "distributor_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "operator_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "sale_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "business_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "confirmed_at",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "confirmed_nav",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "confirmed_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "converted_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "confirmed_units",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "fee_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "channel",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "is_agency_sale",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "operator_id",
+     "ref_table": "service_operator",
+     "ref_column": "operator_id"
+    },
+    {
+     "column": "distributor_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "funding_account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    },
+    {
+     "column": "investor_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "product_id",
+     "ref_table": "wealth_product",
+     "ref_column": "product_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "provision_snapshot": {
+   "columns": [
+    {
+     "name": "provision_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "provision_stage",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "required_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "recognized_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "calculation_method",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    }
+   ],
+   "row_count": 2400
+  },
+  "prudential_metric_snapshot_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 600
+  },
+  "reference_rate": {
+   "columns": [
+    {
+     "name": "reference_rate_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "rate_name",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "tenor_code",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "effective_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "rate_value",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_kind",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 0
+  },
+  "regulatory_event_catalog": {
+   "columns": [
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "event_name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "rule_family",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 375
+  },
+  "regulatory_submission_event_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "related_transaction_record_v3": {
+   "columns": [
+    {
+     "name": "record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "subject_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "event_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "deadline_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "completion_date",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "observed_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "count_value",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "amount_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "ratio_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "source_record_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 260
+  },
+  "relation_type_catalog": {
+   "columns": [
+    {
+     "name": "relation_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "relation_name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 6,
+   "values": [
+    [
+     "SHADOW_SHAREHOLDER",
+     "影子股东"
+    ],
+    [
+     "DE_FACTO_CONTROLLER",
+     "实际控制人"
+    ],
+    [
+     "AFFILIATE",
+     "重大关联方"
+    ],
+    [
+     "COMMON_CONTROL",
+     "同受控制企业"
+    ],
+    [
+     "SENIOR_MANAGER",
+     "关键管理人员"
+    ],
+    [
+     "NON_RELATED",
+     "非关联方"
+    ]
+   ]
+  },
+  "repayment_schedule": {
+   "columns": [
+    {
+     "name": "installment_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "installment_no",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "due_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "principal_due",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "interest_due",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "paid_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    }
+   ],
+   "row_count": 7200
+  },
+  "risk_classification": {
+   "columns": [
+    {
+     "name": "classification_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "loan_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "grade_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "classification_basis",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "assessed_org_unit_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "assessed_by_staff_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "assessed_by_staff_id",
+     "ref_table": "staff_member",
+     "ref_column": "staff_id"
+    },
+    {
+     "column": "assessed_org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    },
+    {
+     "column": "grade_code",
+     "ref_table": "classification_grade",
+     "ref_column": "grade_code"
+    },
+    {
+     "column": "loan_id",
+     "ref_table": "loan_drawdown",
+     "ref_column": "loan_id"
+    }
+   ],
+   "row_count": 2400
+  },
+  "risk_exposure": {
+   "columns": [
+    {
+     "name": "exposure_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "obligor_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "exposure_group_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "agreement_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exposure_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "gross_exposure",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "mitigated_exposure",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "risk_weight",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "agreement_id",
+     "ref_table": "credit_agreement",
+     "ref_column": "agreement_id"
+    },
+    {
+     "column": "exposure_group_id",
+     "ref_table": "exposure_group",
+     "ref_column": "exposure_group_id"
+    },
+    {
+     "column": "obligor_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 0
+  },
+  "secured_obligation": {
+   "columns": [
+    {
+     "name": "secured_obligation_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "security_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "agreement_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "instrument_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "covered_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "instrument_id",
+     "ref_table": "financial_instrument",
+     "ref_column": "instrument_id"
+    },
+    {
+     "column": "agreement_id",
+     "ref_table": "credit_agreement",
+     "ref_column": "agreement_id"
+    },
+    {
+     "column": "security_id",
+     "ref_table": "security_agreement",
+     "ref_column": "security_id"
+    }
+   ],
+   "row_count": 900
+  },
+  "security_agreement": {
+   "columns": [
+    {
+     "name": "security_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "security_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "secured_amount",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "manager_staff_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "manager_staff_id",
+     "ref_table": "staff_member",
+     "ref_column": "staff_id"
+    },
+    {
+     "column": "institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 900
+  },
+  "service_operator": {
+   "columns": [
+    {
+     "name": "operator_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "staff_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "org_unit_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "operator_kind",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "authority_level",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "activated_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "deactivated_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    },
+    {
+     "column": "staff_id",
+     "ref_table": "staff_member",
+     "ref_column": "staff_id"
+    }
+   ],
+   "row_count": 41,
+   "values": [
+    [
+     "OP-STAFF-00001",
+     "STAFF-00001",
+     "INST-001-HQ",
+     "TELLER",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00004",
+     "STAFF-00004",
+     "INST-001-B03",
+     "SUPERVISOR",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00007",
+     "STAFF-00007",
+     "INST-001-HQ",
+     "TELLER",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00010",
+     "STAFF-00010",
+     "INST-001-B03",
+     "SUPERVISOR",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00013",
+     "STAFF-00013",
+     "INST-001-HQ",
+     "TELLER",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00016",
+     "STAFF-00016",
+     "INST-001-B03",
+     "TELLER",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00019",
+     "STAFF-00019",
+     "INST-002-HQ",
+     "SUPERVISOR",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00022",
+     "STAFF-00022",
+     "INST-002-B03",
+     "TELLER",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00025",
+     "STAFF-00025",
+     "INST-002-HQ",
+     "TELLER",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00028",
+     "STAFF-00028",
+     "INST-002-B03",
+     "CREDIT_OFFICER",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00031",
+     "STAFF-00031",
+     "INST-002-HQ",
+     "SUPERVISOR",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00034",
+     "STAFF-00034",
+     "INST-002-B03",
+     "TELLER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00037",
+     "STAFF-00037",
+     "INST-002-HQ",
+     "SUPERVISOR",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00040",
+     "STAFF-00040",
+     "INST-003-B02",
+     "TELLER",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00043",
+     "STAFF-00043",
+     "INST-003-B05",
+     "SUPERVISOR",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00046",
+     "STAFF-00046",
+     "INST-003-B02",
+     "TELLER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00049",
+     "STAFF-00049",
+     "INST-003-B05",
+     "SUPERVISOR",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00052",
+     "STAFF-00052",
+     "INST-003-B02",
+     "TELLER",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00055",
+     "STAFF-00055",
+     "INST-003-B05",
+     "CREDIT_OFFICER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00058",
+     "STAFF-00058",
+     "INST-004-HQ",
+     "SUPERVISOR",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00061",
+     "STAFF-00061",
+     "INST-004-B03",
+     "TELLER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00064",
+     "STAFF-00064",
+     "INST-004-HQ",
+     "TELLER",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00067",
+     "STAFF-00067",
+     "INST-004-B03",
+     "TELLER",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00070",
+     "STAFF-00070",
+     "INST-004-HQ",
+     "SUPERVISOR",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00073",
+     "STAFF-00073",
+     "INST-004-B03",
+     "TELLER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00076",
+     "STAFF-00076",
+     "INST-004-HQ",
+     "CREDIT_OFFICER",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00079",
+     "STAFF-00079",
+     "INST-005-HQ",
+     "SUPERVISOR",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00082",
+     "STAFF-00082",
+     "INST-005-B03",
+     "CREDIT_OFFICER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00085",
+     "STAFF-00085",
+     "INST-005-HQ",
+     "SUPERVISOR",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00088",
+     "STAFF-00088",
+     "INST-005-B03",
+     "CREDIT_OFFICER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00091",
+     "STAFF-00091",
+     "INST-005-HQ",
+     "SUPERVISOR",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00094",
+     "STAFF-00094",
+     "INST-005-B03",
+     "TELLER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00097",
+     "STAFF-00097",
+     "INST-005-HQ",
+     "TELLER",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00100",
+     "STAFF-00100",
+     "INST-005-B03",
+     "SUPERVISOR",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00103",
+     "STAFF-00103",
+     "INST-006-B02",
+     "TELLER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00106",
+     "STAFF-00106",
+     "INST-006-B05",
+     "SUPERVISOR",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00109",
+     "STAFF-00109",
+     "INST-006-B02",
+     "TELLER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00112",
+     "STAFF-00112",
+     "INST-006-B05",
+     "SUPERVISOR",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00115",
+     "STAFF-00115",
+     "INST-006-B02",
+     "TELLER",
+     "L1",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00118",
+     "STAFF-00118",
+     "INST-006-B05",
+     "CREDIT_OFFICER",
+     "L3",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ],
+    [
+     "OP-STAFF-00121",
+     "STAFF-00121",
+     "INST-006-B02",
+     "TELLER",
+     "L2",
+     "2016-01-01",
+     null,
+     "ACTIVE"
+    ]
+   ]
+  },
+  "staff_assignment": {
+   "columns": [
+    {
+     "name": "assignment_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "staff_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "org_unit_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "role_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "role_title",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_from",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "effective_to",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    },
+    {
+     "column": "staff_id",
+     "ref_table": "staff_member",
+     "ref_column": "staff_id"
+    }
+   ],
+   "row_count": 41,
+   "values": [
+    [
+     "ASG-STAFF-00001",
+     "STAFF-00001",
+     "INST-001-HQ",
+     "RELATIONSHIP_MANAGER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00004",
+     "STAFF-00004",
+     "INST-001-B03",
+     "TELLER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00007",
+     "STAFF-00007",
+     "INST-001-HQ",
+     "RELATIONSHIP_MANAGER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00010",
+     "STAFF-00010",
+     "INST-001-B03",
+     "CREDIT_OFFICER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00013",
+     "STAFF-00013",
+     "INST-001-HQ",
+     "TELLER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00016",
+     "STAFF-00016",
+     "INST-001-B03",
+     "RELATIONSHIP_MANAGER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00019",
+     "STAFF-00019",
+     "INST-002-HQ",
+     "TELLER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00022",
+     "STAFF-00022",
+     "INST-002-B03",
+     "RELATIONSHIP_MANAGER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00025",
+     "STAFF-00025",
+     "INST-002-HQ",
+     "RELATIONSHIP_MANAGER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00028",
+     "STAFF-00028",
+     "INST-002-B03",
+     "CREDIT_OFFICER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00031",
+     "STAFF-00031",
+     "INST-002-HQ",
+     "TELLER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00034",
+     "STAFF-00034",
+     "INST-002-B03",
+     "RELATIONSHIP_MANAGER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00037",
+     "STAFF-00037",
+     "INST-002-HQ",
+     "CREDIT_OFFICER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00040",
+     "STAFF-00040",
+     "INST-003-B02",
+     "RELATIONSHIP_MANAGER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00043",
+     "STAFF-00043",
+     "INST-003-B05",
+     "CREDIT_OFFICER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00046",
+     "STAFF-00046",
+     "INST-003-B02",
+     "CREDIT_OFFICER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00049",
+     "STAFF-00049",
+     "INST-003-B05",
+     "RELATIONSHIP_MANAGER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00052",
+     "STAFF-00052",
+     "INST-003-B02",
+     "RELATIONSHIP_MANAGER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00055",
+     "STAFF-00055",
+     "INST-003-B05",
+     "CREDIT_OFFICER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00058",
+     "STAFF-00058",
+     "INST-004-HQ",
+     "TELLER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00061",
+     "STAFF-00061",
+     "INST-004-B03",
+     "TELLER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00064",
+     "STAFF-00064",
+     "INST-004-HQ",
+     "RELATIONSHIP_MANAGER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00067",
+     "STAFF-00067",
+     "INST-004-B03",
+     "CREDIT_OFFICER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00070",
+     "STAFF-00070",
+     "INST-004-HQ",
+     "CREDIT_OFFICER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00073",
+     "STAFF-00073",
+     "INST-004-B03",
+     "CREDIT_OFFICER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00076",
+     "STAFF-00076",
+     "INST-004-HQ",
+     "CREDIT_OFFICER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00079",
+     "STAFF-00079",
+     "INST-005-HQ",
+     "TELLER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00082",
+     "STAFF-00082",
+     "INST-005-B03",
+     "TELLER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00085",
+     "STAFF-00085",
+     "INST-005-HQ",
+     "CREDIT_OFFICER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00088",
+     "STAFF-00088",
+     "INST-005-B03",
+     "TELLER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00091",
+     "STAFF-00091",
+     "INST-005-HQ",
+     "TELLER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00094",
+     "STAFF-00094",
+     "INST-005-B03",
+     "CREDIT_OFFICER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00097",
+     "STAFF-00097",
+     "INST-005-HQ",
+     "RELATIONSHIP_MANAGER",
+     "客户经理",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00100",
+     "STAFF-00100",
+     "INST-005-B03",
+     "RELATIONSHIP_MANAGER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00103",
+     "STAFF-00103",
+     "INST-006-B02",
+     "CREDIT_OFFICER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00106",
+     "STAFF-00106",
+     "INST-006-B05",
+     "RELATIONSHIP_MANAGER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00109",
+     "STAFF-00109",
+     "INST-006-B02",
+     "CREDIT_OFFICER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00112",
+     "STAFF-00112",
+     "INST-006-B05",
+     "CREDIT_OFFICER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00115",
+     "STAFF-00115",
+     "INST-006-B02",
+     "RELATIONSHIP_MANAGER",
+     "柜员",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00118",
+     "STAFF-00118",
+     "INST-006-B05",
+     "CREDIT_OFFICER",
+     "信贷审批",
+     "2016-01-01",
+     null
+    ],
+    [
+     "ASG-STAFF-00121",
+     "STAFF-00121",
+     "INST-006-B02",
+     "TELLER",
+     "柜员",
+     "2016-01-01",
+     null
+    ]
+   ]
+  },
+  "staff_member": {
+   "columns": [
+    {
+     "name": "staff_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "person_party_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "home_org_unit_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "employment_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "employment_status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "hired_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "departed_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "home_org_unit_id",
+     "ref_table": "organization_unit",
+     "ref_column": "org_unit_id"
+    },
+    {
+     "column": "person_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    }
+   ],
+   "row_count": 123
+  },
+  "status_catalog": {
+   "columns": [
+    {
+     "name": "entity",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "status_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "name_zh",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [],
+   "row_count": 17,
+   "values": [
+    [
+     "party",
+     "ACTIVE",
+     "正常"
+    ],
+    [
+     "party",
+     "FROZEN",
+     "冻结"
+    ],
+    [
+     "party",
+     "CLOSED",
+     "销户"
+    ],
+    [
+     "account",
+     "ACTIVE",
+     "正常"
+    ],
+    [
+     "account",
+     "DORMANT",
+     "久悬"
+    ],
+    [
+     "account",
+     "CLOSED",
+     "销户"
+    ],
+    [
+     "loan_drawdown",
+     "ACTIVE",
+     "正常"
+    ],
+    [
+     "loan_drawdown",
+     "SETTLED",
+     "已结清"
+    ],
+    [
+     "loan_drawdown",
+     "WRITTEN_OFF",
+     "已核销"
+    ],
+    [
+     "credit_agreement",
+     "ACTIVE",
+     "正常"
+    ],
+    [
+     "credit_agreement",
+     "MATURED",
+     "已到期"
+    ],
+    [
+     "wealth_product",
+     "ON_SALE",
+     "在售"
+    ],
+    [
+     "wealth_product",
+     "TERMINATED",
+     "已终止"
+    ],
+    [
+     "regulatory_event",
+     "ACTIVE",
+     "有效"
+    ],
+    [
+     "regulatory_event",
+     "VOID",
+     "作废"
+    ],
+    [
+     "payment",
+     "SETTLED",
+     "已清算"
+    ],
+    [
+     "payment",
+     "REVERSED",
+     "已冲正"
+    ]
+   ]
+  },
+  "term_deposit": {
+   "columns": [
+    {
+     "name": "account_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "opening_principal",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "booked_on",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "maturity_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "annual_interest_rate",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "account_id",
+     "ref_table": "account",
+     "ref_column": "account_id"
+    }
+   ],
+   "row_count": 341
+  },
+  "wealth_product": {
+   "columns": [
+    {
+     "name": "product_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "issuer_institution_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "product_name",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "product_category",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "offering_type",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "operation_mode",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "investment_nature",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "risk_level",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "target_investor_type",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "planned_raise_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "actual_raise_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "offering_start_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "offering_end_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "inception_on",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "scheduled_maturity_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "actual_termination_on",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "minimum_holding_days",
+     "type": "INTEGER",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "customer_redemption_allowed",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "is_cash_management",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "is_structured",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "benchmark_floor_rate",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "benchmark_ceiling_rate",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "management_fee_rate",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "custody_fee_rate",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "manager_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "custodian_party_id",
+     "type": "TEXT",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "exception_flag",
+     "type": "INTEGER",
+     "not_null": true,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "custodian_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "manager_party_id",
+     "ref_table": "party",
+     "ref_column": "party_id"
+    },
+    {
+     "column": "issuer_institution_id",
+     "ref_table": "institution",
+     "ref_column": "institution_id"
+    }
+   ],
+   "row_count": 320
+  },
+  "wealth_product_snapshot": {
+   "columns": [
+    {
+     "name": "product_snapshot_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": true
+    },
+    {
+     "name": "product_id",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "as_of_date",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "lifecycle_status",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "currency_code",
+     "type": "TEXT",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "outstanding_balance",
+     "type": "REAL",
+     "not_null": true,
+     "pk": false
+    },
+    {
+     "name": "outstanding_units",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "unit_net_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "cumulative_net_value",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "total_asset_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "total_liability_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "reported_leverage_ratio",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "cumulative_subscription_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "cumulative_redemption_amount",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    },
+    {
+     "name": "realized_yield",
+     "type": "REAL",
+     "not_null": false,
+     "pk": false
+    }
+   ],
+   "foreign_keys": [
+    {
+     "column": "product_id",
+     "ref_table": "wealth_product",
+     "ref_column": "product_id"
+    }
+   ],
+   "row_count": 0
+  }
+ }
+}

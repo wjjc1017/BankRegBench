@@ -1,0 +1,8 @@
+original_column_name,column_name,column_description,data_format,value_description
+gl_balance_id,gl_balance_id,gl_balance_snapshot中的字段 gl_balance_id,TEXT,
+gl_account_id,gl_account_id,gl_balance_snapshot中的字段 gl_account_id,TEXT,
+org_unit_id,org_unit_id,gl_balance_snapshot中的字段 org_unit_id,TEXT,
+as_of_date,as_of_date,gl_balance_snapshot中的字段 as_of_date,TEXT,
+period_type,period_type,gl_balance_snapshot中的字段 period_type,TEXT,
+debit_balance,debit_balance,gl_balance_snapshot中的字段 debit_balance,REAL,
+credit_balance,credit_balance,gl_balance_snapshot中的字段 credit_balance,REAL,
